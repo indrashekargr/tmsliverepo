@@ -1,0 +1,79 @@
+<style>
+    /* your existing container */
+    
+    #wrap {
+    overflow: auto;
+    height: 400px;
+    }
+  
+    </style>
+
+
+<div class="wrapper">
+        <section>
+        <!-- Page content-->
+        <div class="content-wrapper">
+
+<h5 class="text-center" >Tracking Skills</h5>
+<div id="wrap">
+
+
+<table id="table" class="table table-bordered table-hover">
+<thead style="background: #ddd">
+<tr>
+<th>No.</th>
+<th>Employee No.</th>
+<th>Employee Name</th>
+<th>Email</th>
+<th>Reporting Head</th>
+
+<th>Last Modified(Days)</th>
+
+
+</tr>
+</thead>
+<tbody>
+       
+<tr ng-class="{'track-class': tracking.daysago >2}"  ng-repeat="tracking in filteredEmployee = (trackingdata | filter : searchemployeebyname)">
+
+<td>{{$index+1}}</td>
+<td>{{tracking.EmployeeId}}</td>
+<td>{{tracking.FirstName}}&nbsp;{{tracking.LastName}}</td>
+<td>{{tracking.email}}</td>
+<td>{{tracking.reportingmanager}}</td>
+<!--<td>{{tracking.ModifiedDate}}</td>-->
+<td>{{tracking.daysago}}</td>
+
+</tr>
+<tr ng-show="filteredEmployee.length == 0"><td colspan="15" style="font-weight: bold;">No Data found</td></tr>
+</tbody>
+</table>
+</div>
+
+<!-- END table-responsive-->
+<div class="panel-footer">
+
+
+<div class="input-group">
+<input type="text" ng-model="searchemployeebyname" placeholder="Search" class="col-2 form-control" style="
+padding: 0px 50px 0px 15px;"> <span class="input-group-btn">
+<!-- <button type="button" ng-click="searchemployeename(searchemployeebyname)" class="btn btn-sm btn-default"><i class="fa fa-edit"></i><span class="hidden-xs  hidden-md">Search</span></button> -->
+</span>
+</div>
+
+</div>
+</div>
+</div>
+<!-- END panel-->
+<!-- END row-->
+</div>
+</section>
+</div>
+<script>
+document.getElementById("wrap").addEventListener("scroll", function () {
+var translate = "translate(0," + this.scrollTop + "px)";
+this.querySelector("thead").style.transform = translate;
+});
+</script>
+
+

@@ -1,0 +1,170 @@
+<style>
+/* your existing container */
+
+#wrap {
+overflow: auto;
+height: 400px;
+}
+/* css for demo */
+
+td {
+background-color: #fff;       
+
+}
+.theadbackgroud{
+background: #ddd;
+}
+</style>
+<div class="wrapper">
+<section>
+<!-- Page content-->
+<div class="content-wrapper">
+<!-- <a type="button" class="pull-right btn btn-box-tool" style="color:white;"><img src="assets/images/icons/add.png" data-toggle="modal" data-target="#AddStatusModal" title="Add Skills" style="cursor:pointer;width: 30px;"></a> -->
+<a data-toggle="modal" data-target="#AddStatusModal" data-whatever="@mdo"><img src="assets/images/icons/add.png" class="pull-right MRTop" data-toggle="tooltip" data-placement="top" title="" data-original-title="Add StatusMaster"></a>
+<h5 class="text-center">Status Master Data</h5>
+<div id="wrap">
+<table id="" class="table table-bordered table-hover" ng-if="userinfodata.RoleId==2">
+<thead class="theadbackgroud">
+<tr>
+<th>No.</th>
+<th>Status Name</th>                            
+<th>Description</th>
+<th>Action</th>
+
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="status in filteredEmployee = (getStatusList | filter : searchText)">
+<td>{{$index+1}}</td>
+
+<td>{{status.StatusName}}</td>
+<td>{{status.Description}}</td>
+<td> <a href="" data-toggle="modal"  title="Edit Status Master" data-target="#exampleModaladd" data-whatever="@mdo"><img src="assets/images/icons/edit icon.png" data-toggle="tooltip" data-placement="top" class="width_edit_icon" data-toggle="tooltip" data-placement="top" ng-click="editstatus(status.Id,status.StatusName,status.Description)" title="Edit Profile">&nbsp; &nbsp; &nbsp;</a> </td>
+</tr>
+<tr ng-show="filteredEmployee.length == 0">
+<td colspan="15" style="font-weight: bold;">No Data found</td>
+</tr>
+</tbody>
+</table> 
+
+</div>
+<!-- END table-responsive-->
+<input type="text" class="col-2 form-control" placeholder="Search" ng-model='searchText'>
+<span class="input-group-btn"></span>
+</div>
+</div>
+<!--Update cateory skills modal start-->
+<div class="modal fade" id="exampleModaladd" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+<h4 class="modal-title" id="exampleModalLabel">Edit Status Master</h4> </div>
+<div class="modal-body">
+<form>
+<div class="form-group">
+<label for="recipient-name" class="control-label">Status Name*:</label>
+<input type="text" class="form-control" ng-model="status.StatusName" id="recipient-name"> </div>
+<div class="form-group">
+<label for="message-text" class="control-label">Description*:</label>
+<textarea class="form-control" ng-model="status.Description" id="message-text"></textarea>
+</div>
+</form>
+</div>
+<div class="modal-footer">
+<button type="button" class="mb-sm btn btn-primary btn-outline" ng-click="updateStatus()">Update</button>
+<button type="button" class="mb-sm btn btn-danger btn-outline" data-dismiss="modal">Cancel</button>
+</div>
+</div>
+</div>
+</div>
+<!--Update cateory skills modal end-->
+<!--Add category modal start-->
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h4 class="modal-title" id="exampleModalLabel">Add Status Master Data</h4> </div>
+<div class="modal-body">
+<form>
+<div class="form-group">
+<label for="recipient-name" class="control-label">Status Name:</label>
+<input type="text" ng-model="StatusName" class="form-control" id="recipient-name"> </div>
+<div class="form-group">
+<label for="message-text" class="control-label">Description:</label>
+<textarea class="form-control" ng-model="Description" id="message-text"></textarea>
+</div>
+</form>
+</div>
+<div class="modal-footer">
+<button type="submit" class="mb-sm btn btn-primary btn-outline" ng-click="AddStatus()" data-dismiss="modal">Add</button>
+<button type="button" class="mb-sm btn btn-danger btn-outline" data-dismiss="modal">Cancel</button>
+</div>
+</div>
+</div>
+</div> -->
+<div class="modal fade" id="AddStatusModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+<h4 class="modal-title" id="exampleModalLabel">Add Status Master Data</h4> </div>
+<div class="modal-body">
+<form>
+<div class="form-group">
+<label for="recipient-name" class="control-label">Status Name*:</label>
+<input type="text" ng-model="StatusName" class="form-control" id="recipient-name"> </div>
+<div class="form-group">
+<label for="message-text" class="control-label">Description*:</label>
+<textarea class="form-control" ng-model="Description" id="message-text"></textarea>
+</div>
+</form> 
+</div>
+<div class="modal-footer">
+<button type="submit"  class="mb-sm btn btn-primary btn-outline" ng-click="AddStatus(StatusName,Description)">Add</button>
+<button type="button" class="mb-sm btn btn-danger btn-outline" data-dismiss="modal" ng-click="Clear()">Cancel</button>
+</div>
+</div>
+</div>
+</div>
+
+<!--Add sub Skills category modal end-->
+<!--update sub Skills modal start-->
+<div class="modal fade" id="EditSkillModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+<div class="modal-dialog" role="document">
+<div class="modal-content">
+<div class="modal-header">
+<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+<h4 class="modal-title" id="exampleModalLabel">Edit Sub Skill</h4> </div>
+<div class="modal-body">
+<div class="col-md-12">
+<div class="box box-info ">
+<div class="box-body EMS_PanelHeading">
+<form>
+<div class="form-group">
+<lable>Skill Name*:</lable>
+<input type="text" class="form-control" ng-model="sub.SkillName"> </div>
+<!--   <div class="form-group">
+<lable>Description</lable>
+<textarea class="form-control" rows="5" id="comment"></textarea>
+</div>-->
+</form>
+</div>
+</div>
+</div>
+<div class="modal-footer text-center">
+<button type="button" ng-click="updateSubCategory()" class="mb-sm btn btn-primary btn-outline">Save</button>
+<button type="button" class="mb-sm btn btn-danger btn-outline " data-dismiss="modal">Close</button>
+</div>
+</div>
+</div>
+</div>
+<!--update sub Skills modal end-->
+<script>
+document.getElementById("wrap").addEventListener("scroll", function () {
+var translate = "translate(0," + this.scrollTop + "px)";
+this.querySelector("thead").style.transform = translate;
+});
+</script>
+

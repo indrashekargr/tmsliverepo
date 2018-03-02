@@ -1,0 +1,74 @@
+<header class="topnavbar-wrapper">
+    <!-- START Top Navbar-->
+    <nav role="navigation" class="navbar topnavbar">
+        <!-- START navbar header-->
+        <!-- <div class="navbar-header">
+            <a class="navbar-brand">
+                <div class="brand-logo"> <img src="assets/images/imanageicon.png" class="Tmp_logo"> </div>
+                <div class="brand-logo-collapsed"> <img src="assets/images/imanageicon.png" alt="App Logo" class="img-responsive"> </div>
+            </a> 
+        </div> -->
+        <!-- END navbar header-->
+        <!-- START Nav wrapper-->
+        <div class="col-lg-6">
+            
+                <div class="col-lg-2"> 
+                        <img src="assets/images/imanageicon.png" class="" style="height: 50%;width: 85%;">    
+                </div>
+                <div class="col-lg-8" style="color: white;font-size: 200%;margin-top: 3%;margin-left: -6%;">Talent Management System</div>
+    
+    
+            </div>
+
+        <div class="col-lg-6" style="text-align: end;">
+      
+
+        <div class="col-lg-8"style="text-align: end;">
+
+                <div class="user-block-picture">
+                        <a ui-sref="profile" title="View profile" data-toggle="collapse">
+                        <div class="user-block-status"> <img style="width: 12%;margin-top: 3%;" src="https://cdn2.iconfinder.com/data/icons/rcons-user/32/male-circle-512.png" alt="Avatar" width="60" height="60" class="img-thumbnail img-circle">
+                           
+                        </a>
+    
+                        </div>
+                    </div>
+        </div>
+            <div class="col-lg-3" style="
+            text-align: left;
+            margin-top: 2%;
+            margin-left: -4%;
+        ">
+                    <div class="user-block-info" ng-model="EmployeeList"> <span style="
+                        font-size: 150%;
+                        color: whitesmoke;
+                    " class="user-block-name"> {{EmployeeList.FirstName}} {{EmployeeList.LastName}}</span> <br/><span class="user-block-role">{{EmployeeList.designation}}</span> </div>
+
+            </div>
+            <!-- START Left navbar-->
+            <div class="col-lg-1">
+            <ul class="nav navbar-nav">
+               <!-- <li> -->
+                    <!-- Button used to collapse the left sidebar. Only visible on tablet and desktops-->
+                   <!-- <a href="#" data-trigger-resize="" data-toggle-state="aside-collapsed" class="hidden-xs"> <em class="fa fa-navicon"></em> </a> -->
+                    <!-- Button to show/hide the sidebar on mobile. Visible on mobile only.-->
+                    <!-- <a href="#" data-toggle-state="aside-toggled" data-no-persist="true" class="visible-xs sidebar-toggle"> <em class="fa fa-navicon"></em>
+                    </a>
+                </li> -->
+ 
+                        <a ng-click="logout()"  title="Logout" data-toggle="collapse">
+                            
+                                <img src="assets/images/icons/logout.png" style="margin-top: 86%;text-align: end;margin-left: 140%;"></a>
+
+                            <!--  <div class="pull-right label label-info">3</div>-->                        </a>
+                    
+                <!-- END User avatar toggle-->
+            </ul>
+        </div>
+            <!-- END Left navbar-->
+            <!-- START Right Navbar-->
+            <!-- END Right Navbar-->
+    </div>
+    </nav>
+    <!-- END Top Navbar-->
+</header>

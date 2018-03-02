@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ITMS">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" href="assets/images/integra.png">
+    <title>Talent Management System</title>
+    <!-- =============== VENDOR STYLES ===============--> 
+    <!-- SIMPLE LINE ICONS-->
+<!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css" />-->
+    <!-- =============== BOOTSTRAP STYLES ===============-->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" id="bscss">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- =============== APP STYLES ===============-->
+
+    <link rel="stylesheet" href="assets/css/app.css" id="maincss">
+    
+    <link rel="stylesheet" href="assets/css/custom.css" id="maincss">
+    <style>
+        .Tmp_heading_font {
+            color: white;
+            font-weight: bold;
+            font-size: 25px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+<!--<h1 style="text-align: center">
+  Indrashekar  G R
+</h1> -->
+   <div class="wrapper">
+     <div class="" ui-view="viewlogin"> </div>
+        <div class="">
+            <div ui-view="viewHeader"></div>
+            <div ui-view="viewSidebar"></div>
+            <div ui-view="viewBody"> </div>
+            <div ui-view="viewFooter"> </div>
+        </div>
+    </div> 
+    <!-- =============== VENDOR SCRIPTS ===============-->
+    <!-- JQUERY-->
+    <script src="assets/js/jquery.js"></script>
+    <!--Angular JS library-->
+    <script src="assets/js/angular.js"></script>
+    <!--Angular Router-->
+    <script src="assets/js/angular-ui-router.min.js"></script>    
+    <!-- MODERNIZR-->
+    <!--<script src="assets/js/modernizr.custom.js"></script>-->
+    <!-- BOOTSTRAP-->
+    <script src="assets/js/bootstrap.js"></script>
+    <!-- STORAGE API-->
+    <script src="assets/js/jquery.storageapi.js"></script>
+    <!-- =============== APP SCRIPTS ===============-->
+    <script src="assets/js/app.js"></script>
+   <script src="app/TMP_Route.js"></script>
+    <!-- PARSLEY-->
+   <script src="app/SkillMaster/TMP_SkillMaster.js"></script>
+    <script src="assets/js/parsley.min.js"></script>
+    <script src="assets/js/angular-sanitize.min.js"></script>
+    <script src="assets/js/angular-idle.min.js"></script>
+    <script src="app/LoginPage/Tmp_login.js"></script> 
+    <script src="app/Services/loginAuthService.js"></script>
+    <script src="app/HomePage/TMP_Home.js"></script>
+	<script src="app/EmployeeRegistration/TMP_EmpRegistration.js"></script>
+     <script src="app/profile/TMP_P.js"></script>
+     <script src="app/Partials/TMP_Sidebar.js"></script>
+	 <script src="app/ResourceSkills/TMP_ResourceSkills.js"></script>
+     <script src="app/TrackingSkills/TMP_TrackingSkills.js"></script>
+    <script src="app/StatusMaster/statusmaster.js"></script>
+    <!-- END THEME LAYOUT SCRIPTS -->
+  
+ 
+
+    
+    <script type = "text/javascript" >
+        function preventBack(){window.history.forward();}
+         setTimeout("preventBack()", 0);
+         window.onunload=function(){null};
+     </script>
+</body>
+
+</html>

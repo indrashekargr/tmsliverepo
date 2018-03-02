@@ -1,0 +1,862 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8df1417e-751c-4ec7-91de-9dc86be1e44f" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/config/swagger.json" afterPath="$PROJECT_DIR$/config/swagger.json" />
+      <change beforePath="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html" afterPath="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html" />
+      <change beforePath="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js" afterPath="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js" />
+      <change beforePath="$PROJECT_DIR$/lib/addEmployeeDataByHR.js" afterPath="$PROJECT_DIR$/lib/addEmployeeDataByHR.js" />
+      <change beforePath="$PROJECT_DIR$/lib/addEmployeeResourceSkillsByHR.js" afterPath="$PROJECT_DIR$/lib/addEmployeeResourceSkillsByHR.js" />
+      <change beforePath="$PROJECT_DIR$/lib/addEmployeeStatusByManager.js" afterPath="$PROJECT_DIR$/lib/addEmployeeStatusByManager.js" />
+      <change beforePath="$PROJECT_DIR$/lib/addbumasterbyadmin.js" afterPath="$PROJECT_DIR$/lib/addbumasterbyadmin.js" />
+      <change beforePath="$PROJECT_DIR$/lib/adddesignationforadmin.js" afterPath="$PROJECT_DIR$/lib/adddesignationforadmin.js" />
+      <change beforePath="$PROJECT_DIR$/lib/addskillcategoryforadmin.js" afterPath="$PROJECT_DIR$/lib/addskillcategoryforadmin.js" />
+      <change beforePath="$PROJECT_DIR$/lib/addstatusmasterbyadmin.js" afterPath="$PROJECT_DIR$/lib/addstatusmasterbyadmin.js" />
+      <change beforePath="$PROJECT_DIR$/lib/addsubskillcategoryforadmin.js" afterPath="$PROJECT_DIR$/lib/addsubskillcategoryforadmin.js" />
+      <change beforePath="$PROJECT_DIR$/lib/addtrackingemployee.js" afterPath="$PROJECT_DIR$/lib/addtrackingemployee.js" />
+      <change beforePath="$PROJECT_DIR$/lib/branchlistforhr.js" afterPath="$PROJECT_DIR$/lib/branchlistforhr.js" />
+      <change beforePath="$PROJECT_DIR$/lib/deleteEmployeeMasterdetailByHR.js" afterPath="$PROJECT_DIR$/lib/deleteEmployeeMasterdetailByHR.js" />
+      <change beforePath="$PROJECT_DIR$/lib/deleteEmployeeResourceSkillsByHR.js" afterPath="$PROJECT_DIR$/lib/deleteEmployeeResourceSkillsByHR.js" />
+      <change beforePath="$PROJECT_DIR$/lib/employeeRepository.js" afterPath="$PROJECT_DIR$/lib/employeeRepository.js" />
+      <change beforePath="$PROJECT_DIR$/lib/externalemployeeRepository.js" afterPath="$PROJECT_DIR$/lib/externalemployeeRepository.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchAllReportingHeads.js" afterPath="$PROJECT_DIR$/lib/fetchAllReportingHeads.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchAllReportingHeadsupdate.js" afterPath="$PROJECT_DIR$/lib/fetchAllReportingHeadsupdate.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchCurrentEmployeeDataByHR.js" afterPath="$PROJECT_DIR$/lib/fetchCurrentEmployeeDataByHR.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnBuId.js" afterPath="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnBuId.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnEmpId.js" afterPath="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnEmpId.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js" afterPath="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchEmployeeMasterdetailsByManager.js" afterPath="$PROJECT_DIR$/lib/fetchEmployeeMasterdetailsByManager.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchResourceSkillDetailsBasedOnUser.js" afterPath="$PROJECT_DIR$/lib/fetchResourceSkillDetailsBasedOnUser.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchbusinessunitmasterlist.js" afterPath="$PROJECT_DIR$/lib/fetchbusinessunitmasterlist.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchcategorylist.js" afterPath="$PROJECT_DIR$/lib/fetchcategorylist.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchdesignationlist.js" afterPath="$PROJECT_DIR$/lib/fetchdesignationlist.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchemployeedatabyadmin.js" afterPath="$PROJECT_DIR$/lib/fetchemployeedatabyadmin.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchemployeetracking.js" afterPath="$PROJECT_DIR$/lib/fetchemployeetracking.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchemployeetrackingformanager.js" afterPath="$PROJECT_DIR$/lib/fetchemployeetrackingformanager.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchqualificationList.js" afterPath="$PROJECT_DIR$/lib/fetchqualificationList.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchskillslist.js" afterPath="$PROJECT_DIR$/lib/fetchskillslist.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchstatusmasterlist.js" afterPath="$PROJECT_DIR$/lib/fetchstatusmasterlist.js" />
+      <change beforePath="$PROJECT_DIR$/lib/fetchtrackingskillsforhr.js" afterPath="$PROJECT_DIR$/lib/fetchtrackingskillsforhr.js" />
+      <change beforePath="$PROJECT_DIR$/lib/login.js" afterPath="$PROJECT_DIR$/lib/login.js" />
+      <change beforePath="$PROJECT_DIR$/lib/roleslistforhr.js" afterPath="$PROJECT_DIR$/lib/roleslistforhr.js" />
+      <change beforePath="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsAllRatingForHR.js" afterPath="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsAllRatingForHR.js" />
+      <change beforePath="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForBU.js" afterPath="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForBU.js" />
+      <change beforePath="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForBuHead.js" afterPath="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForBuHead.js" />
+      <change beforePath="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForHR.js" afterPath="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForHR.js" />
+      <change beforePath="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForManager.js" afterPath="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForManager.js" />
+      <change beforePath="$PROJECT_DIR$/lib/skillmasterlist.js" afterPath="$PROJECT_DIR$/lib/skillmasterlist.js" />
+      <change beforePath="$PROJECT_DIR$/lib/upadateemployeetracking.js" afterPath="$PROJECT_DIR$/lib/upadateemployeetracking.js" />
+      <change beforePath="$PROJECT_DIR$/lib/upadatestatusmasterbyadmin.js" afterPath="$PROJECT_DIR$/lib/upadatestatusmasterbyadmin.js" />
+      <change beforePath="$PROJECT_DIR$/lib/updateEmployeeDataByHR.js" afterPath="$PROJECT_DIR$/lib/updateEmployeeDataByHR.js" />
+      <change beforePath="$PROJECT_DIR$/lib/updateEmployeeResourceSkillsByHR.js" afterPath="$PROJECT_DIR$/lib/updateEmployeeResourceSkillsByHR.js" />
+      <change beforePath="$PROJECT_DIR$/lib/updateskillcategoryforadmin.js" afterPath="$PROJECT_DIR$/lib/updateskillcategoryforadmin.js" />
+      <change beforePath="$PROJECT_DIR$/lib/updatesubskillcategoryforadmin.js" afterPath="$PROJECT_DIR$/lib/updatesubskillcategoryforadmin.js" />
+      <change beforePath="$PROJECT_DIR$/lib/viewSelfEmployeeResourceSkills.js" afterPath="$PROJECT_DIR$/lib/viewSelfEmployeeResourceSkills.js" />
+      <change beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="TMP_Home.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="400">
+              <caret line="1370" column="1" lean-forward="false" selection-start-line="1370" selection-start-column="1" selection-end-line="1370" selection-end-column="1" />
+              <folding>
+                <element signature="n#style#0;n#button#1;n#a#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <marker date="1519897713313" expanded="false" signature="13635:13657" ph="..." />
+                <marker date="1519897713313" expanded="false" signature="47163:47177" ph="..." />
+                <marker date="1519897713313" expanded="false" signature="47519:47533" ph="..." />
+                <marker date="1519897713313" expanded="false" signature="47921:47935" ph="..." />
+                <marker date="1519897713313" expanded="false" signature="48675:48689" ph="..." />
+                <marker date="1519897713313" expanded="false" signature="49559:49573" ph="..." />
+                <marker date="1519897713313" expanded="false" signature="50171:50185" ph="..." />
+                <marker date="1519897713313" expanded="false" signature="51842:51856" ph="..." />
+                <marker date="1519897713313" expanded="false" signature="52395:52409" ph="..." />
+                <marker date="1519897713313" expanded="false" signature="52944:52958" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>Add E</find>
+      <find>Add Employee Det</find>
+      <find>ViewSkillsModal</find>
+      <find>ale</find>
+      <find>updateEmployee</find>
+      <find>searchskill</find>
+      <find>searchskillformanager</find>
+      <find>Edit Skills</find>
+      <find>searchEmployeeResourceSkillsForHR</find>
+      <find>editTracking</find>
+      <find>currentEmployeeList</find>
+      <find>http://fonts.googleapis.com/css</find>
+      <find>{Buid}</find>
+      <find>{BuName}</find>
+      <find>skilldata</find>
+      <find>Clear</find>
+      <find>addResourceskills</find>
+      <find>addTracking</find>
+      <find>AddTrackClear</find>
+      <find>editEmployee</find>
+      <find>statusChange</find>
+      <find>updateEmployeeDataByHR</find>
+      <find>AddTrakingModal</find>
+      <find>skillmasterlist</find>
+      <find>var pool = mysql.createPool({</find>
+      <find>trackdata[0].addAction</find>
+      <find>!track.Action</find>
+      <find>clearTrack()</find>
+      <find>track.Action</find>
+      <find>Tracking</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>var mysql=require('./mysqlConnection');</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/lib/addbumasterbyadmin.js" />
+        <option value="$PROJECT_DIR$/lib/addEmployeeDataByHR.js" />
+        <option value="$PROJECT_DIR$/lib/addEmployeeResourceSkillsByHR.js" />
+        <option value="$PROJECT_DIR$/lib/addEmployeeStatusByManager.js" />
+        <option value="$PROJECT_DIR$/lib/addskillcategoryforadmin.js" />
+        <option value="$PROJECT_DIR$/lib/addstatusmasterbyadmin.js" />
+        <option value="$PROJECT_DIR$/lib/addsubskillcategoryforadmin.js" />
+        <option value="$PROJECT_DIR$/lib/branchlistforhr.js" />
+        <option value="$PROJECT_DIR$/lib/deleteEmployeeMasterdetailByHR.js" />
+        <option value="$PROJECT_DIR$/lib/deleteEmployeeResourceSkillsByHR.js" />
+        <option value="$PROJECT_DIR$/lib/fetchAllReportingHeads.js" />
+        <option value="$PROJECT_DIR$/lib/fetchAllReportingHeadsupdate.js" />
+        <option value="$PROJECT_DIR$/lib/fetchbusinessunitmasterlist.js" />
+        <option value="$PROJECT_DIR$/lib/fetchcategorylist.js" />
+        <option value="$PROJECT_DIR$/lib/fetchCurrentEmployeeDataByHR.js" />
+        <option value="$PROJECT_DIR$/lib/fetchdesignationlist.js" />
+        <option value="$PROJECT_DIR$/lib/fetchemployeedatabyadmin.js" />
+        <option value="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnBuId.js" />
+        <option value="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnEmpId.js" />
+        <option value="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js" />
+        <option value="$PROJECT_DIR$/lib/fetchEmployeeMasterdetailsByManager.js" />
+        <option value="$PROJECT_DIR$/lib/fetchemployeetrackingformanager.js" />
+        <option value="$PROJECT_DIR$/lib/fetchqualificationList.js" />
+        <option value="$PROJECT_DIR$/lib/fetchResourceSkillDetailsBasedOnUser.js" />
+        <option value="$PROJECT_DIR$/lib/fetchskillslist.js" />
+        <option value="$PROJECT_DIR$/lib/fetchstatusmasterlist.js" />
+        <option value="$PROJECT_DIR$/lib/fetchtrackingskillsforhr.js" />
+        <option value="$PROJECT_DIR$/lib/roleslistforhr.js" />
+        <option value="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsAllRatingForHR.js" />
+        <option value="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForBU.js" />
+        <option value="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForBuHead.js" />
+        <option value="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForManager.js" />
+        <option value="$PROJECT_DIR$/lib/skillmasterlist.js" />
+        <option value="$PROJECT_DIR$/lib/upadateemployeetracking.js" />
+        <option value="$PROJECT_DIR$/lib/upadatestatusmasterbyadmin.js" />
+        <option value="$PROJECT_DIR$/lib/updateEmployeeDataByHR.js" />
+        <option value="$PROJECT_DIR$/lib/updateEmployeeResourceSkillsByHR.js" />
+        <option value="$PROJECT_DIR$/lib/updateskillcategoryforadmin.js" />
+        <option value="$PROJECT_DIR$/lib/updatesubskillcategoryforadmin.js" />
+        <option value="$PROJECT_DIR$/lib/viewSelfEmployeeResourceSkills.js" />
+        <option value="$PROJECT_DIR$/lib/mysqlConnection.js" />
+        <option value="$PROJECT_DIR$/lib/externalemployeeRepository.js" />
+        <option value="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForHR.js" />
+        <option value="$PROJECT_DIR$/lib/employeeRepository.js" />
+        <option value="$PROJECT_DIR$/lib/login.js" />
+        <option value="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js" />
+        <option value="$PROJECT_DIR$/lib/fetchemployeetracking.js" />
+        <option value="$PROJECT_DIR$/config/swagger.json" />
+        <option value="$PROJECT_DIR$/server.js" />
+        <option value="$PROJECT_DIR$/lib/addtrackingemployee.js" />
+        <option value="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1340" />
+    <option name="height" value="688" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="tmslivev1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmslivev1" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="tmslivev1" type="b2602c69:ProjectViewProjectNode" />
+              <item name="tmslivev1" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="tmslivev1" type="cbb8eebc:String" user="tmslivev1" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="tmslivev1" type="cbb8eebc:String" user="tmslivev1" />
+              <item name="config" type="cbb8eebc:String" user="config" />
+            </path>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="tmslivev1" type="cbb8eebc:String" user="tmslivev1" />
+              <item name="lib" type="cbb8eebc:String" user="lib" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/server.js" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="settings.editor.selected.configurable" value="copyright" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\08-01-2018\18-01-2018\tmslivev1\lib" />
+      <recent name="D:\08-01-2018\18-01-2018\tmslivev1\data" />
+      <recent name="D:\08-01-2018\18-01-2018\tmslivev1\handlers" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Node.js.Unnamed (1)">
+    <configuration name="Unnamed (1)" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="server.js" working-dir="$PROJECT_DIR$" />
+    <configuration name="Unnamed" type="NodeJSConfigurationType" factoryName="Node.js" path-to-js-file="server.js" working-dir="$PROJECT_DIR$" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.Unnamed (1)" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.Unnamed" />
+    </list>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8df1417e-751c-4ec7-91de-9dc86be1e44f" name="Default" comment="" />
+      <created>1517292479017</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1517292479017</updated>
+      <workItem from="1517292484299" duration="15736000" />
+      <workItem from="1517398197803" duration="326606000" />
+      <workItem from="1519879655915" duration="3109000" />
+      <workItem from="1519884562894" duration="1758000" />
+      <workItem from="1519886397015" duration="1227000" />
+      <workItem from="1519905145025" duration="7000" />
+      <workItem from="1519905570214" duration="625000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="349068000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24330357" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6603774" sideWeight="0.1068814" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.057096247" sideWeight="0.8931186" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24925596" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6084829" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5415987" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6603774" sideWeight="0.1068814" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.0" sideWeight="0.8931186" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6084829" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2700893" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24925596" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5415987" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnBuId.js</url>
+          <line>38</line>
+          <option name="timeStamp" value="155" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="178" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="debuggerHistoryManager">
+    <expressions id="evaluateCodeFragment">
+      <expression>
+        <expression-string>results.statusCode</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>results</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>fields</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>console.log(results);</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>connection</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>connection.release();</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>results.employeeDetails</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>results[0]</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>resutldata</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>CODE_FRAGMENT</evaluation-mode>
+      </expression>
+    </expressions>
+    <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>backupresult</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>JSON.stringify(backupdate).employeeDetails</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>JSON.stringify(backupdate).result.employeeDetails</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>JSON.stringify(backupdate)</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>JSON.parse(backupdate)</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>backupdate</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>resutldata.data.Result[0].login</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>resutldata.data.Result[0]</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>resutldata.data.Result</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+      <expression>
+        <expression-string>resutldata.data.result</expression-string>
+        <language-id>JavaScript</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
+    </expressions>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/lib/addstatusmasterbyadmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="55" column="22" lean-forward="true" selection-start-line="55" selection-start-column="22" selection-end-line="55" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/addsubskillcategoryforadmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="201">
+          <caret line="68" column="9" lean-forward="true" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/branchlistforhr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/deleteEmployeeMasterdetailByHR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="32" lean-forward="true" selection-start-line="25" selection-start-column="32" selection-end-line="25" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/deleteEmployeeResourceSkillsByHR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchAllReportingHeads.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchAllReportingHeadsupdate.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchbusinessunitmasterlist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchcategorylist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="28" column="15" lean-forward="true" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchdesignationlist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="17" lean-forward="false" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchemployeedatabyadmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="26" column="8" lean-forward="true" selection-start-line="26" selection-start-column="8" selection-end-line="26" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnBuId.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="44" column="15" lean-forward="true" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnEmpId.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="27" column="1284" lean-forward="false" selection-start-line="27" selection-start-column="1284" selection-end-line="27" selection-end-column="1284" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="24" column="976" lean-forward="false" selection-start-line="24" selection-start-column="976" selection-end-line="24" selection-end-column="976" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchEmployeeMasterdetailsByManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="29" column="1352" lean-forward="false" selection-start-line="29" selection-start-column="1352" selection-end-line="29" selection-end-column="1352" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchemployeetrackingformanager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="18" column="17" lean-forward="false" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchqualificationList.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchResourceSkillDetailsBasedOnUser.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="22" column="762" lean-forward="false" selection-start-line="22" selection-start-column="762" selection-end-line="22" selection-end-column="762" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchskillslist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="238" lean-forward="false" selection-start-line="22" selection-start-column="238" selection-end-line="22" selection-end-column="238" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchstatusmasterlist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="24" column="17" lean-forward="false" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchtrackingskillsforhr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="41" column="48" lean-forward="false" selection-start-line="41" selection-start-column="48" selection-end-line="41" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/roleslistforhr.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="29" column="20" lean-forward="true" selection-start-line="29" selection-start-column="20" selection-end-line="29" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/searchEmployeeResourceSkillsAllRatingForHR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="30" column="31" lean-forward="true" selection-start-line="30" selection-start-column="31" selection-end-line="30" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForBU.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForBuHead.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="20" column="9" lean-forward="false" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForManager.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/skillmasterlist.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/upadatestatusmasterbyadmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/updateEmployeeDataByHR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="48" column="17" lean-forward="false" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/updateEmployeeResourceSkillsByHR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="57" column="35" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/updateskillcategoryforadmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="57" column="23" lean-forward="true" selection-start-line="57" selection-start-column="23" selection-end-line="57" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/updatesubskillcategoryforadmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="57" column="26" lean-forward="true" selection-start-line="57" selection-start-column="26" selection-end-line="57" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/request/request.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1890">
+          <caret line="1180" column="17" lean-forward="true" selection-start-line="1180" selection-start-column="17" selection-end-line="1180" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/mysqlConnection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="21" lean-forward="true" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForHR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="28" column="53" lean-forward="true" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/LoginPage/Tmp_login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="55" column="18" lean-forward="true" selection-start-line="55" selection-start-column="18" selection-end-line="55" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/viewSelfEmployeeResourceSkills.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="23" lean-forward="false" selection-start-line="32" selection-start-column="23" selection-end-line="32" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/externalemployeeRepository.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="901">
+          <caret line="53" column="78" lean-forward="false" selection-start-line="53" selection-start-column="78" selection-end-line="53" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/employeeRepository.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchCurrentEmployeeDataByHR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="714">
+          <caret line="42" column="27" lean-forward="false" selection-start-line="42" selection-start-column="27" selection-end-line="42" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/addbumasterbyadmin.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="73" column="1" lean-forward="true" selection-start-line="73" selection-start-column="1" selection-end-line="73" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="843" column="23" lean-forward="false" selection-start-line="843" selection-start-column="23" selection-end-line="843" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/upadateemployeetracking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="3" lean-forward="true" selection-start-line="23" selection-start-column="3" selection-end-line="23" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchemployeetracking.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="752">
+          <caret line="47" column="11" lean-forward="true" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/swagger.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="2069" column="27" lean-forward="true" selection-start-line="2068" selection-start-column="18" selection-end-line="2069" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/addtrackingemployee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="31" lean-forward="true" selection-start-line="23" selection-start-column="31" selection-end-line="23" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/addtrackingemployee.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="49" column="12" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/addEmployeeDataByHR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="400">
+          <caret line="1370" column="1" lean-forward="false" selection-start-line="1370" selection-start-column="1" selection-end-line="1370" selection-end-column="1" />
+          <folding>
+            <element signature="n#style#0;n#button#1;n#a#0;n#div#2;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#article#0;n#div#2;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <marker date="1519897713313" expanded="false" signature="13635:13657" ph="..." />
+            <marker date="1519897713313" expanded="false" signature="47163:47177" ph="..." />
+            <marker date="1519897713313" expanded="false" signature="47519:47533" ph="..." />
+            <marker date="1519897713313" expanded="false" signature="47921:47935" ph="..." />
+            <marker date="1519897713313" expanded="false" signature="48675:48689" ph="..." />
+            <marker date="1519897713313" expanded="false" signature="49559:49573" ph="..." />
+            <marker date="1519897713313" expanded="false" signature="50171:50185" ph="..." />
+            <marker date="1519897713313" expanded="false" signature="51842:51856" ph="..." />
+            <marker date="1519897713313" expanded="false" signature="52395:52409" ph="..." />
+            <marker date="1519897713313" expanded="false" signature="52944:52958" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

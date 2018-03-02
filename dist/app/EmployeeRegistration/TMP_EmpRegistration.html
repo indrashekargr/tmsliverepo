@@ -1,0 +1,267 @@
+<style>
+    .btn1 {
+        background-color: #23b7e5;
+        border: none;
+        color: white;
+        padding: 12px 16px;
+        font-size: 16px;
+        cursor: pointer;
+        float: right;
+    }
+
+    /* Darker background on mouse-over */
+    .btn1:hover {
+        background-color: #23b7e5;
+    }
+</style>
+<div class="wrapper" >
+    <section>
+<!-- Page content-->
+<div class="content-wrapper">
+    <div class="w3-padding w3-xlarge w3-teal">
+        <button class="btn1" ui-sref="home"><i class="fa fa-home"></i> Home</button>
+<h5 class="text-center Employee_Title">Add Employee Details</h5></div>
+    <div class="panel panel-default TMP_UpdateProfile_overflow">
+        <div class="panel-body">
+            <form role="form">
+                <div class="row">
+
+                    <div class="col-lg-3">
+                        <div class="form-group">
+                            <label>Employee No.<span style="color:#3c8dbc;">*</span></label>
+                            <input type="text" id="EmployeeId" ng-model="EmployeeId" placeholder="Enter employee no." class="form-control">
+                        </div>
+                    </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Employee First Name<span style="color:#3c8dbc;">*</span></label>
+                                <input type="text" ng-model="FirstName" placeholder="Enter First Employee Name " class="form-control">
+                             </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Employee Last Name</label>
+                                <input type="text" ng-model="LastName" placeholder="Enter Last Employee Name " class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                                <label>Designation<span style="color:#3c8dbc;">*</span></label>
+                                <select convert-number class="form-control" ng-model="DesignationId" ng-change="designationmasterchanged()">
+                                    <option value="">-- Select Qualification --</option>
+                                    <option ng-repeat="designation in designationmaster" ng-selected="designation.Id == currentUser.Id" value="{{designation.Id}}">{{designation.DesignationName}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+
+                             <div class="form-group">
+                                <label>Role<span style="color:#3c8dbc;">*</span></label>
+                                <select class="form-control" ng-model="RoleID" ng-change="rolechanged()">
+                                 <option value="">-- Select Role --</option>
+                                    <option ng-repeat="role in roles" ng-selected="role.RoleID == currentUser.RoleId" value="{{role.RoleID}}">{{role.Name}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-3">
+                            <div class="form-group">
+                             <label>Reporting Manager<span style="color:#3c8dbc;">*</span></label>
+                            <select class="form-control" ng-model="ReportingManager" ng-change="managerchanged()">
+                            <option value="">-- Select Manager --</option>
+                            <option ng-repeat="manager in managers" ng-selected="manager.EmployeeId == currentUser.ReportingManager" value="{{manager.EmployeeId}}">{{manager.ManagerName}} - {{manager.EmployeeId}}</option>
+                            </select>
+                            </div>
+                        </div>
+        <div class="col-lg-3">
+            <div class="form-group">
+                <label>Highest Qualification<span style="color:#3c8dbc;">*</span></label>
+                <select convert-number class="form-control" ng-model="QualificationId" ng-change="qualificationmasterchanged()">
+                    <option value="">-- Select Qualification --</option>
+                    <option ng-repeat="qualification in qualificationmaster" ng-selected="qualification.Id == currentUser.Id" value="{{qualification.Id}}">{{qualification.QualificationName}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="form-group">
+                <label>Prior Experience (Years)<span style="color:#3c8dbc;">*</span></label>
+                <input type="text" ng-model="PriorExprience"  placeholder="Enter Prior Experience in years" id="decimalPt" class="form-control">
+        </div>
+
+        </div>
+        <div class="col-lg-3">
+
+            <div class="form-group">
+                <label>Branch<span style="color:#3c8dbc;">*</span></label>
+                <select convert-number class="form-control" ng-model="BranchId" ng-change="branchchanged()">
+                    <option value="">-- Select Branch --</option>
+                    <option ng-repeat="branch in branchlist" ng-selected="branch.BranchId == currentUser.BranchId" value="{{branch.BranchId}}">{{branch.BranchName}}</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="col-lg-3">
+
+            <div class="form-group">
+                <label>Email ID<span style="color:#3c8dbc;">*</span> </label>
+                <input type="email" ng-model="email" id="email" placeholder="Enter Email Id" ng-blur="checkEmail()" class="form-control">
+        </div>
+
+</div>
+        <div class="col-lg-3">
+            <div class="form-group">
+                <label>Password<span style="color:#3c8dbc;">*</span></label>
+                <input type="text" ng-model="Password" placeholder="Enter Password" class="form-control">
+        </div>
+
+
+        </div>
+        <div class="col-lg-3">
+
+            <div class="form-group">
+                <label>Primary Skills<span style="color:#3c8dbc;">*</span></label>
+                <select convert-number class="form-control" ng-model="SkillId" ng-change="skillmasterchanged()">
+                    <option value="">-- Select Primary Skill --</option>
+                    <option ng-repeat="skill in skillmasterlist" ng-selected="skill.SkillId == currentUser.SkillId" value="{{skill.SkillId}}">{{skill.SkillName}}</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="col-lg-3">
+
+            <div class="form-group">
+                <label>Availability<span style="color:#3c8dbc;">*</span></label>
+                <select convert-number class="form-control" ng-model="Availability" ng-change="statusmasterchanged()">
+                    <option value="">-- Select Availability --</option>
+                    <option ng-repeat="status in statusmaster" ng-selected="status.Id == currentUser.Id" value="{{status.Id}}">{{status.StatusName}}</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-3">
+
+            <div class="form-group">
+                <label>Gender<span style="color:#3c8dbc;">*</span></label>
+                <div class="">
+                    <label>
+
+                        <input type="radio" ng-model="Gender"  value="Male" > Male</label>
+                    <label>
+                        <input type="radio" ng-model="Gender"  value="Female" >Female</label>
+                </div>
+            </div>
+
+        </div>
+        <div class="col-lg-3">
+
+            <div class="form-group">
+                <label>Reporting Head<span style="color:#3c8dbc;">*</span></label>
+                <select  class="form-control" ng-model="IsReportingHead">
+                    <option value="">-- Select Reporting Head --</option>
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+
+                </select>
+            </div>
+        </div>
+<div class="col-lg-3">
+    <div class="form-group">
+        <label>Date of Joining<span style="color:#3c8dbc;">*</span></label>
+        <input type="date" ng-model="DateOfJoining" placeholder="12/11/2017" class="form-control datepick">
+</div>
+
+        </div>
+        <div class="col-lg-3">
+
+            <div class="form-group">
+                <label>Contact No.<span style="color:#3c8dbc;">*</span></label>
+                <input    id="tbNumbers" onkeypress="javascript:return isNumber(event)" minlength="8" maxlength="15"  ng-model="ContactNo" placeholder="Enter Contact No." class="form-control">
+        </div>
+
+
+        </div>
+<div class="col-lg-3">
+
+    <div class="form-group">
+        <label>Date of Birth<span style="color:#3c8dbc;">*</span></label>
+        <input type="date" ng-model="DateOfBirth" ng-change="checkDob()" data-relmax="-18" class="form-control"/>
+    </div>
+
+</div>
+<div class="col-lg-3">
+    <div class="form-group">
+        <label>Access To Resource Database<span style="color:#3c8dbc;">*</span></label>
+        <select class="form-control" ng-model="AccessToResourceDatabase">
+            <option value="">-- Select Access To Resource Database --</option>
+            <option value="1">Yes</option>
+            <option value="0">No</option>
+        </select>
+    </div>
+
+</div>
+<div class="col-lg-3">
+
+    <div class="form-group">
+        <label>Business Unit<span style="color:#3c8dbc;">*</span></label>
+        <select convert-number class="form-control" ng-model="BuId" ng-change="bumasterchanged()">
+            <option value="">-- Select Business Unit --</option>
+            <option ng-repeat="bu in bumaster" ng-selected="bu.Id == currentUser.Id" value="{{bu.Id}}">{{bu.buName}}</option>
+        </select>
+    </div>
+
+</div>
+<div class="col-lg-12">
+
+    <div class="text-center">
+        <button type="submit"  class="mb-sm btn btn-primary btn-outline" ng-click="addEmployeeData()">Submit</button>
+        <button type="reset" class="mb-sm btn btn-danger btn-outline" ng-click="Clear()">Reset</button>
+        <button type="submit" ui-sref="home" class="mb-sm btn btn-danger btn-outline">Cancel</button>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+$('#decimalPt, .decimalPt').keypress(function(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode == 8 || charCode == 37) {
+      return true;
+    } else if (charCode == 46 && $(this).val().indexOf('.') != -1) {
+      return false;
+    } else if (charCode > 31 && charCode != 46 && (charCode < 48 || charCode > 57)) {
+      return false;
+    }
+    return true;
+  });
+
+function isNumber(evt) {
+var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+    return false;
+
+return true;
+} 
+
+</script>

@@ -1,0 +1,1373 @@
+<style>
+/* your existing container */
+
+#wrap {
+overflow: auto;
+height: 350px;
+}
+
+/* css for demo */
+
+td {
+background-color: #fff;
+
+}
+
+.theadbackgroud {
+background: #ddd;
+}
+</style>
+
+<div class="">
+<!-- offsidebar-->
+<!-- Main section-->
+<!--<section> -->
+<!-- Page content-->
+<div class="content-wrapper">
+
+<div class="col-lg-12">
+  <div ng-if =  "!showInputsArticleWithInput" class="col-lg-7">
+      <h5 class="text-center" style="
+      text-align: right;
+      font-size: x-large;
+      color: black;
+  ">Dashboard
+      </h5>
+  </div>
+  <div ng-if="showInputsArticleWithInput" class="col-lg-7">
+    <h5 class="text-center" style="
+    text-align: right;
+    font-size: x-large;
+    color: black;
+">Employee Resource Skills Detail
+    </h5>
+</div>
+  <div class="col-lg-5">
+      <a >
+          <button class="btn btn-info pull-right MRTop" type="text" ng-click="showInputsArticleWithInput = !showInputsArticleWithInput"
+          ng-bind="showInputsArticleWithInput? 'Dashboard': 'Edit Skills'">
+        </button>
+          <button class="btn btn-info pull-right MRTop" style="margin-left: 1%;margin-right: 1%;"  ng-if="showInputsArticleWithInput = showInputsArticleWithInput" ng-click="allemployeeList()"><i class="fa fa-database" aria-hidden="true"></i></button>
+          </button>
+      </a>
+     <!-- <article ng-if="showInputsArticleWithInput">
+          <a ng-if="userinfodata.RoleId==5 " ui-sref="newEmployee">
+              <img src="assets/images/icons/add.png" class="pull-right MRTop" data-toggle="tooltip" data-placement="top"
+              title="Add New Employee" data-original-title="Add Employee">
+              </i>
+              </a>
+       </article> -->
+
+  </div>
+  
+</div>
+
+<div  class="col-lg-12">
+
+<div class="panel panel-default">
+        <div class="panel-body" ng-if="showInputsArticleWithInput">
+            <form role="form">
+                <div class="clearfix">
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <label>Category:<span
+                                style="color:#3c8dbc;">&nbsp;*</span></label>
+                            <select class="form-control" ng-model="category" ng-options="ca.CategoryId as ca.CategoryName for ca in categorylist" ng-change="getskilllist(category)">
+                                <option value="">--Select Category--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <label>Skills:<span
+                                style="color:#3c8dbc;">&nbsp;*</span></label>
+                            <select class="form-control" ng-model="skill" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
+                                <option value="">--Select Skills--</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="form-group">
+                            <label>Rating:<span
+                                style="color:#3c8dbc;">&nbsp;*</span></label>
+                            <select class="form-control" ng-model="rating">
+                                <option value="">--Select Rating--</option>
+                               <!-- <option >All</option> -->
+                             <!--  <select-all values="ratings"><option selected="">Select All</option></select-all> -->
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                            <div class="form-group">
+                                <label>Availability:<span
+                                    style="color:#3c8dbc;">&nbsp;*</span></label>
+                                <select class="form-control" ng-model="Availability" ng-options="avail.Id as avail.StatusName for avail in statuslist">
+                                    <option value="">--Select Availability--</option>
+                                </select>
+                            </div>
+                        </div>
+                   <!-- <div class="col-lg-2">
+                        <div class="form-group">
+                            <label>Availablity:</label>
+                            <select class="form-control" ng-model="availablity">
+                                <option value>--Select Availablity--</option>
+                                <option value="yes">Yes</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                    </div> -->
+                    <div class="col-lg-2">
+                        <div style="margin-top: 23px;">
+                            <button ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==4 || userinfodata.RoleId==6" type="submit" ng-click="searchskill(category,skill,rating,Availability)"
+                                class="mb-sm btn-lg btn btn-primary btn-outline "><i class="fa fa-filter" aria-hidden="true"></i>
+                                 Filter</button>
+                            <button ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==4 || userinfodata.RoleId==6" class="mb-sm btn-lg btn btn-primary btn-outline"
+                                    type="reset"
+                                    ng-click="reset()"><i class="fa fa-refresh"></i>
+                                Refresh</button>
+                            <button ng-if="userinfodata.RoleId==3 || userinfodata.RoleId==2 || userinfodata.RoleId==7" type="submit" ng-click="searchskillformanager(category,skill,rating,Availability)"
+                                class="mb-sm btn-lg btn btn-primary btn-outline "> <i class="fa fa-filter" aria-hidden="true"></i>
+                                 Filter</button>
+
+    
+                        </div>
+                        
+                      <!--  <div action="/search" method="post" class="pull-right">
+                            <input type="search" ng-model='searchText' style="width:300px;display:inline-block;margin-right: 55px;padding-right: .5em;" class="form-control" placeholder="Search here...">
+                        </div> -->
+                    </div>
+                    
+                </div>
+            </form>
+        </div>
+        
+    </div> </div><div class="col-lg-12">
+    
+
+    <article ng-if="showInputsArticleWithInput">
+        <div id="wrap">
+        <table id="" class="table table-bordered table-hover" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==4 || userinfodata.RoleId==6 || userinfodata.RoleId==7">
+        <thead class="theadbackgroud">
+        <tr style="border-bottom: 1px solid #eee;">
+        <th>No.</th>
+        <!--<th>Photo</th> -->
+        <th>Employee No.</th>
+        <th>Employee Name</th>
+       <!-- <th>Designation</th> -->
+      <!--  <th>Email</th> -->
+        <th >Contact Detail</th>
+        
+        <th>Reporting Head</th> 
+        <!--<th>Prior Exp.</th>
+        <th>Integra Exp.</th> -->
+        <th>Total Exp.</th>
+        <th>Resource Skills</th>
+        <th>Last Modified</th>
+        <!--<th>Availability</th> -->
+       <!-- <th ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3">Skills</th> -->
+       <th ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3">Action</th>
+            <th ng-if="userinfodata.RoleId==6 || userinfodata.RoleId==3">Track</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr style="
+        border-bottom: 1px solid #eee;
+        " ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==4 ||userinfodata.RoleId==6 " ng-repeat="user in filteredEmployee = (currentEmployeeList | filter : searchText) | orderBy:'EmployeeId'">
+        <td>{{$index+1}}</td>
+        <!--<td>
+        <div class="media">
+        <img src="assets/images/user.ico" alt="user" class="img-responsive img-circle"> </div>
+        </td> -->
+        <td>{{user.EmployeeId}}</td>
+        <td>{{user.FirstName}}&nbsp;{{user.LastName}}</td>
+      <!--  <td>{{user.Designation}}</td> -->
+       
+        <td><i class="fa fa-phone" aria-hidden="true"></i>
+             {{user.ContactNo}}</br><i class="fa fa-envelope" aria-hidden="true"></i>
+       {{user.Email}}</td>
+        <td>{{user.reportingmanager}}</td>
+       <!-- <td>{{user.PriorExprience}}</td>
+        <td>{{user.integraExperience}}</td> -->
+        <td>{{user.totalExperience}}</td>
+        <td>
+            <a data-toggle="modal" ng-click="skillUpdate(user.UserId,user.EmployeeId,user.FirstName,user.LastName,user.RoleID)"
+           title="view more skills" data-target="#ViewSkillsModal" data-whatever="@mdo">{{user.PrimarySkill}}</a>
+            </td>
+            <td >{{user.ModifiedBy || user.CreatedBy}} </br> {{user.ModifiedDate || user.CreatedDate}}</td>
+         <!--  <td ng-if="user.ModifiedBy==null && user.ModifiedDate==null || user.CreatedBy!=null &&  user.CreatedDate!=null">{{user.CreatedBy}} </br>-->  {{user.CreatedDate}}</td>
+
+          <!--  <td ng-if="user.ModifiedBy!=null ||  user.ModifiedDate!=null ||  user.CreatedBy==null || user.CreatedDate==null">{{user.ModifiedBy}} </br> {{user.ModifiedDate}}</td> -->
+        <!--<td>{{user.AvailabilityStatus}}</td> -->
+        <td>
+        <a ng-if="userinfodata.RoleId==5" href="" data-toggle="modal" data-target=".bs-example-modal-lg"
+        style="text-decoration: none;">
+        <img src="assets/images/icons/edit icon.png" data-toggle="tooltip"
+        data-placement="top" class="width_edit_icon" data-toggle="tooltip"
+        data-placement="top" ng-click="editEmployee(user.EmployeeId)"
+        title="Edit Profile">
+        </i>&nbsp; &nbsp; &nbsp;</a>
+        <a ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==6" href="" data-toggle="modal" data-target=".bs-example1-modal-lg"
+        style="text-decoration: none;">
+        <i class="fa fa-user-circle-o" data-toggle="tooltip"
+            data-placement="top" class="width_edit_icon" data-toggle="tooltip"
+            data-placement="top" ng-click="editTracking(user.UserId,user.EmployeeId,user.FirstName,user.LastName,user.reportingmanager,user.BusinessUnit,user.integraExperience,user.totalExperience,user.Branch)"
+            title="Tracking Profile" aria-hidden="true"></i>
+    
+        </i>&nbsp; &nbsp; &nbsp;</a>
+      <!--  <a ng-if="userinfodata.RoleId==5"
+        href="">
+        <img src="assets/images/icons/delete icon.png" class="width_edit_icon"
+        ng-click="deleteEmployeeProfile(user.EmployeeId)"
+        data-toggle="tooltip" data-placement="top" title="Delete Profile">
+        </i>
+        </a> -->
+      <!--  <a data-toggle="modal" ng-click="skillUpdate(user.UserId,user.EmployeeId,user.FirstName,user.LastName,user.RoleID)"
+        data-target="#ViewSkillsModal" data-whatever="@mdo">View Skills</a> -->
+        </td>
+        </tr>
+        </tbody>
+        <tbody>
+        <tr ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==4 || userinfodata.RoleId==3 || userinfodata.RoleId==6 " ng-show="filteredEmployee.length == 0"
+        style="border:1px solid #e7e7e7;">
+        <td colspan="15" style="font-weight: bold;">No Data found</td>
+        </tr>
+        </tbody>
+        <tbody ng-if="userinfodata.RoleId==3" ng-repeat="user in managerEmployeeList | filter:searchText track by $index" style="border:1px solid #e7e7e7;">
+        <tr>
+        <td>{{$index+1}}</td>
+       <!-- <td>
+        <div class="media">
+        <img src="assets/images/user.ico" alt="user" class="img-responsive img-circle"> </div>
+        </td> -->
+        <td>{{user.EmployeeId}}</td>
+        <td>{{user.FirstName}} {{user.LastName}}</td>
+       <!-- <td>{{user.Designation}}</td> -->
+       <!-- <td>{{user.Email}}</td> -->
+            <td><i class="fa fa-phone" aria-hidden="true"></i>
+                {{user.ContactNo}}</br><i class="fa fa-envelope" aria-hidden="true"></i>
+                {{user.Email}}</td>
+        <td>{{user.reportingmanager}}</td>
+        <td>{{user.totalExperience}}</td>
+            <td>
+                <a data-toggle="modal" ng-click="skillUpdate(user.UserId,user.EmployeeId,user.FirstName,user.LastName,user.RoleID)"
+                   title="view more skills" data-target="#ViewSkillsModal" data-whatever="@mdo">{{user.PrimarySkill}}</a>
+            </td>
+           <!-- <td ng-if="user.ModifiedBy == null || user.ModifiedDate == null ">{{user.CreatedBy}} </br>  {{user.CreatedDate}}</td>-->
+            <td >{{user.ModifiedBy || user.CreatedBy}} </br> {{user.ModifiedDate || user.CreatedDate}}</td>
+       <!-- <td>{{user.PrimarySkill}}</td> -->
+        <!--<td>{{user.AvailabilityStatus}}</td> -->
+        <td>
+        <a href="" data-toggle="modal" data-target=".bs-example-modal-lg"
+        style="text-decoration: none;">
+        <img src="assets/images/icons/edit icon.png" data-toggle="tooltip"
+        data-placement="top" class="width_edit_icon" data-toggle="tooltip"
+        data-placement="top" ng-click="editEmployeeStatus(user.EmployeeId)"
+        title="Edit Profile">
+        </i>&nbsp; &nbsp; &nbsp;</a>
+           <!-- <a ng-if="userinfodata.RoleId==3" href="" data-toggle="modal" data-target=".bs-example1-modal-lg"
+               style="text-decoration: none;">
+                <i class="fa fa-user-circle-o" data-toggle="tooltip"
+                   data-placement="top" class="width_edit_icon" data-toggle="tooltip"
+                   data-placement="top" ng-click="editTracking(user.UserId,user.EmployeeId,user.FirstName,user.LastName,user.reportingmanager,user.BusinessUnit,user.integraExperience,user.totalExperience)"
+                   title="Tracking Profile" aria-hidden="true"></i>
+
+                </i>&nbsp; &nbsp; &nbsp;</a> -->
+        </td>
+        </tr>
+        </tbody>
+        <tbody ng-if="userinfodata.RoleId==7" ng-repeat="user in buEmployeeList | filter:searchText" style="border:1px solid #e7e7e7;">
+            <tr>
+            <td>{{$index+1}}</td>
+            <td>
+            <div class="media">
+            <img src="assets/images/user.ico" alt="user" class="img-responsive img-circle"> </div>
+            </td>
+            <td>{{user.EmployeeId}}</td>
+            <td>{{user.FirstName}} &nbsp; {{user.LastName}}</td>
+            <td>{{user.Designation}}</td>
+            <td>{{user.Email}}</td>
+            <td>{{user.reportingmanager}}</td>
+            <td>{{user.PriorExprience}}</td>
+            <td>{{user.integraExperience}}</td>
+            <td>{{user.totalExperience}}</td>
+            <td>{{user.PrimarySkill}}</td>
+            <!--<td>{{user.AvailabilityStatus}}</td> -->
+            </tr>
+            </tbody>
+        </table>
+        </div>
+        
+        <div class="modal fade" id="ViewSkillsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="static"
+        data-keyboard="false">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header" style="background:#fff; color:rgb(0, 0, 0);text-align: center;">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                    <a type="button" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3" class="pull-right btn btn-box-tool" style="color:white;">
+                        <img src="assets/images/icons/add.png" data-toggle="modal" data-target="#AddSkillModal" title="Add Skills"
+                            style="cursor:pointer;width: 30px;">
+                    </a>
+                    <h4 class="modal-title" id="exampleModalLabel">Skills for {{Employee_First_Name}} {{Employee_Last_Name}} ({{CurEmployeeId}})</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-12">
+                        <div class="box box-info ">
+                            <div class="box-body EMS_PanelHeading">
+                                <div class="table-responsive">
+                                    <table class="table no-margin text-center">
+                                        <thead class="theadbackgroud">
+                                            <tr style="background: #061743;">
+                                                <th style="color: white;">Category Name</th>
+                                                <th style="color: white;">Skill Name</th>
+                                                <th style="color: white;">Rating</th>
+                                                <th style="color: white;">Modified By</th>
+                                                <th style="color: white;">Modified On</th>
+                                                <th style="color: white;" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3">Action</th>
+                                                <!--   <th>Modified by </th>
+                                               <th>Action </th>-->
+                                            </tr>
+                                        </thead>
+                                        <tbody ng-repeat="skill in skilldata">
+                                            <tr ng-if="skill">
+                                                <td>{{skill.categoryName}}</td>
+                                                <td>{{skill.skillName}}</td>
+                                                <td>{{skill.rating}}
+                                                </td>
+                                                <td ng-if="skill.ModifiedBy==null">{{skill.CreatedBy}}</td>
+                                                <th ng-if="skill.ModifiedBy!=null">{{skill.ModifiedBy}}</th>
+                                                <td ng-if="skill.ModifiedDate==null">{{skill.CreatedDate}}</td>
+                                                <th ng-if="skill.ModifiedDate!=null">{{skill.ModifiedDate}}</th>
+                                                <!--<td>{{skill.ModifiedBy}}</td>
+                                                 <th>{{skill.ModifiedDate}}</th>-->
+                                                <td ng-if="skill.categoryName">
+                                                    <a href="" title="Edit Skills" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3" ng-click="updateskill(skill.categoryName,skill.skillName,skill.rating,skill.EmployeeSkillId,CurEmployeeId,Employee_First_Name,Employee_Last_Name)"
+                                                        data-toggle="modal" data-target="#EditSkillModal" data-whatever="@mdo">
+                                                        <img src="assets/images/icons/edit icon.png" data-toggle="tooltip" data-placement="top"
+                                                            class="width_edit_icon" data-toggle="tooltip" data-placement="top">
+                                                    </a>&nbsp;&nbsp;
+                                                    <!-- <a href="" ng-if="userinfodata.RoleId==5" title="Delete Skills" ng-click="deleteskills(skill.EmployeeSkillId,CurEmployeeId)"><img src="assets/images/icons/delete icon.png" class="width_edit_icon"></a>  -->
+    
+                                                    <a href="" ng-if="userinfodata.RoleId==5" title="Delete Skills" ng-click="deleteskills(skill.EmployeeSkillId,CurEmployeeId,Employee_First_Name,Employee_Last_Name,skill.UserId)">
+                                                        <img src="assets/images/icons/delete icon.png" class="width_edit_icon">
+                                                    </a>
+    
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" style="text-align: center;">
+                    <button  type="reset" class="mb-sm btn btn-danger btn-outline" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Add Skills modal start-->
+<div class="modal fade" id="AddSkillModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Add Skill for the Employee {{Employee_First_Name}} {{Employee_Last_Name}} ({{CurEmployeeId}})</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Category :</label>
+                                    <select class="form-control" ng-model="category1" ng-options="ca.CategoryId as ca.CategoryName for ca in categorylist" ng-change="getskilllist(category1)">
+                                        <option value>-- Select Category --</option>
+    
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Skills :</label>
+                                    <select class="form-control" ng-model="skill1" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
+                                        <option value>-- Select Skills --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                    <label>Rating :</label>
+                                    <select class="form-control" ng-model="Rating">
+                                        <option value>-- Select Rating--</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="mb-sm btn btn-primary btn-outline" ng-click="addResourceskills(skill1,Rating,category1,CurEmployeeId,Employee_First_Name,Employee_Last_Name)">Add</button>
+                    <button type="reset" class="mb-sm btn btn-danger btn-outline " ng-click="Clear()" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Add Skills modal end-->
+
+    <!--Edit Skills modal start-->
+<div class="modal fade" id="EditSkillModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Edit Skill for the Employee {{Employee_First_Name}} {{Employee_Last_Name}} ({{CurEmployeeId}})</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="col-md-12">
+                        <div class="box box-info ">
+                            <div class="box-body EMS_PanelHeading">
+                                <div class="table-responsive">
+                                    <table class="table no-margin text-center">
+                                        <thead>
+                                            <tr style="background: #ebecec;">
+                                                <th>Category Name</th>
+                                                <th>Skill Name</th>
+                                                <th>Rating</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>{{skill.categoryName}}</td>
+                                                <td>{{skill.skillName}}</td>
+    
+                                                <td>
+                                                    <select class="form-control" ng-model="skill.Rating" ng-options=" r.RatingID  as r.RatingID  for r in ratings">
+                                                        <option value="">--- Rating ---</option>
+    
+                                                    </select>
+                                                </td>
+                                            </tr>
+    
+    
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer text-center">
+                    <button type="button" class="mb-sm btn btn-primary btn-outline " ng-click="editskill(skill.Rating)">Save</button>
+                    <button type="button" class="mb-sm btn btn-danger btn-outline " data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Edit Skills modal end-->
+    
+
+        <!-- END table-responsive-->
+        <div class="panel-footer">
+        
+        <div class="input-group">
+        <input type="text" placeholder="Search" ng-model='searchText' class="input-md form-control" style="
+        padding: 0px 0px 0px 0px; margin-top:2%; width: 350px;">
+        <span class="input-group-btn"> 
+        <!--<button type="button" class="btn btn-sm btn-default">Search</button> -->
+      <!--  </span>
+        
+        </div>
+        </div> -->
+        
+        
+        </section>
+        
+        </div>
+
+        <!--Start Edit employee profile tracking details modal -->
+        <div class="modal fade bs-example1-modal-lg" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==6" id="editTracking" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+                
+        <div class="modal-content">
+        <div class="">
+        <section>
+        <!-- Page content-->
+        <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>                
+       
+
+        <h5 class="text-center"style="
+        font-size: 142%;
+        color: black;
+    "><b>Tracking Profile</b></h5>
+        <!-- START row-->
+        <div class="row">
+        <div class="col-sm-12">
+        <!-- START panel-->
+        <div class="panel panel-default TMP_UpdateProfile_overflow">
+        <div class="panel-body">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="col-lg-12"style="margin-left: -1%; ">
+                        <div class="form-group">
+                                <div class="col-lg-12"style="margin-bottom: 1%;">
+                                <div class="col-lg-2"style="padding: 0px;">
+                                        <label>Name:</label> 
+                                </div> 
+                                  
+                                <div class="col-lg-3"style="margin-left: -1%; ">
+                                        <input type="text" placeholder="Enter employee no." value="{{Employee_First_Name}} {{Employee_Last_Name}}" class="form-control" readonly>
+                                </div> 
+                                <div class="col-lg-1"></div>
+                                <div class="col-lg-2"style="margin-left: 1%;">
+                                <label>EmployeeID:</label>
+                                </div>
+                                <div class="col-lg-3">
+                                        <input type="text" placeholder="Enter employee no." value="{{CurEmployeeId}}" class="form-control" readonly>                                        
+                                </div>
+                                <div class="col-lg-1"></div>
+                                </div>
+
+                                <div class="col-lg-12"style="margin-bottom: 1%;">
+                                <div class="col-lg-2" style="
+                                padding: 0px;
+                            ">
+                                        <label>Integra Exp.(Months):</label>
+                                </div>
+                                <div class="col-lg-3"style="
+                                margin-left: -1%;
+                            ">
+                                        <input type="text" placeholder="Enter employee no." value="{{integraExperience}}" class="form-control" readonly>
+                                        
+                                </div>
+                                <div class="col-lg-1"></div>
+                                
+                                <div class="col-lg-2"style="
+                                margin-right: 1%;
+                            ">
+                                        <label>Total Exp.(Months):</label>
+                                        
+                                </div>
+                                <div class="col-lg-3"style="
+                                margin-left: -1px;
+                            ">
+                                        <input type="text" placeholder="Enter employee no." value="{{totalExperience}}" class="form-control" readonly>
+                                        
+                                </div>
+                                <div class="col-lg-1"></div>
+                                </div>
+                                
+                                <div class="col-lg-12"style="margin-bottom: 1%;">
+                                <div class="col-lg-2"style="padding: 0px; ">
+                                        <label>Business Unit:</label>
+                                        
+                                </div>
+                                <div class="col-lg-3"style="
+                                margin-left: -1%;
+                            ">
+                                        <input type="text" placeholder="Enter employee no." value="{{Branch}}" class="form-control" readonly>
+                                        
+                                </div>
+                                <div class="col-lg-1"></div>
+                                
+                                <div class="col-lg-2"style="
+                                margin-left: 1%;
+                            ">
+                                        <label>Reporting Head:</label>
+                                        
+                                </div>
+                                <div class="col-lg-3">
+                                        <input type="text" placeholder="Enter employee no." value="{{reportingmanager}}" class="form-control" readonly>
+                                        
+                                </div>
+                        </div>                
+                        </div></div>
+                </div>
+            </div>
+            <div class="row"style="
+            font-size: 150%;
+            text-align: center;
+        ">
+               <b>Project Tracking</b> 
+               <div ng-if = !trackdata[0].addAction>
+               <a type="button" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3" class="pull-right btn btn-box-tool" style="color:white;">
+                    <img src="assets/images/icons/add.png" data-toggle="modal" data-target="#AddTrakingModal" ng-click="clearTrack()" title="Add Project"
+                        style="cursor:pointer;width: 30px;">
+                </a>
+            </div>
+            </div>
+            <div class="row">
+                    <table class="table table-striped table-bordered"style="
+                    margin-left: 3%;
+                    /* margin-right: 33%; */
+                    width: 95%;
+                    margin-top: 2%;
+                ">
+                            <thead>
+                                <tr style="
+                                background-color: #393350;
+                            ">
+                                  
+                                   
+                                    <th style="
+                                    color: white;
+                                    font-size: 110%;
+                                    border-color: #393350;
+                                    border-style: double;
+                                ">Company</th>
+                                    <th style="
+                                    color: white;
+                                    font-size: 110%;
+                                    border-color: #393350;
+                                    border-style: double;
+                                ">Project</th>
+                                    <th style="
+                                    color: white;
+                                    font-size: 110%;
+                                    border-color: #393350;
+                                    border-style: double;
+                                ">Type</th>
+                                    <th style="
+                                    color: white;
+                                    font-size: 110%;
+                                    border-color: #393350;
+                                    border-style: double;
+                                ">From</th>
+                                    <th style="
+                                    color: white;
+                                    font-size: 110%;
+                                    border-color: #393350;
+                                    border-style: double;
+                                ">To</th>
+                                    <th style="
+                                    color: white;
+                                    font-size: 110%;
+                                    border-color: #393350;
+                                    border-style: double;
+                                ">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody ng-repeat="track in trackdata">
+                                <!--Made it easier, so no more redundant copypasta in other pages-->
+                                <tr>
+                                    <td style="
+                                    border-color: #393350;
+                                    border-style: double;  ">{{track.CompanyName}}</td>
+                                 
+                                    <td style="
+                                    border-color: #393350;
+                                    border-style: double;  ">{{track.ProjectName}}</td>
+                                    <td style="
+                                    border-color: #393350;
+                                    border-style: double;  ">{{track.type}}</td>
+                                    <td style="
+                                    border-color: #393350;
+                                    border-style: double;  ">{{track.FromDate}}</td>
+                                    <td style="
+                                    border-color: #393350;
+                                    border-style: double;  ">{{track.ToDate}}</td>
+                                    <td style="
+                                    border-color: #393350;
+                                    border-style: double;  ">
+                                    <!--<td ng-if="skill.categoryName"> -->
+                                     <!--   <a href="" title="Edit Project" ng-if="userinfodata.RoleId==5" ng-click="editTrackingProject(track.ToDate)"
+                                            data-toggle="modal" data-target="#EditTrackModal" data-whatever="@mdo">
+                                            <img src="assets/images/icons/edit icon.png" data-toggle="tooltip" data-placement="top"
+                                                class="width_edit_icon" data-toggle="tooltip" data-placement="top">
+                                        </a>&nbsp;&nbsp; -->
+<div ng-if = !track.Action> <label>Project Closed</label> </div>
+<div ng-if = track.Action > 
+                                        <a href="" title="Edit Skills" ng-if="userinfodata.RoleId==5" ng-click="updatetrack(track.Id,track.UserId,track.ProjectName,track.CompanyName,track.FromDate,track.ToDate,CurEmployeeId,Employee_First_Name,Employee_Last_Name)"
+                                        data-toggle="modal" data-target="#EditTrackModal" data-whatever="@mdo">
+                                        <img src="assets/images/icons/edit icon.png" data-toggle="tooltip" data-placement="top"
+                                            class="width_edit_icon" data-toggle="tooltip" data-placement="top">
+                                    </a>&nbsp;&nbsp;</div>
+                                </td>
+                                </tr>
+                            </tbody>
+                        </table> 
+            
+            </div>       
+                            
+          
+        <div class="text-center">
+       <!-- <button type="submit" class="mb-sm btn btn-primary btn-outline" ng-click="updateEmployee(employee.FirstName,employee.EmployeeId,employee.LastName,employee.DesignationId,employee.HighestQualification,employee.ContactNo,employee.PriorExprience,firstDate,secondDate,employee.RoleId,employee.PrimarySkill,employee.ReportingManager,employee.integraExperience,employee.Password,employee.IsReportingHead,employee.Availability,employee.BuId)">Update</button>-->
+        <!--<button type="submit" class="mb-sm btn btn-warning btn-outline">Disengage</button> -->
+       
+        </div>
+        
+        </div>
+        </div>
+        <!-- END panel-->
+        </div>
+        </div>
+        <!-- END row-->
+        </div>
+        </section>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!--End Edit employee profile tracking details modal -->
+
+        
+    <!--Add Employee Tracking modal start-->
+<div class="modal fade" id="AddTrakingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="exampleModalLabel">Add Project for the Employee {{Employee_First_Name}} {{Employee_Last_Name}} ({{CurEmployeeId}})</h4>
+                </div>
+                <div class="modal-body">
+                    <form role="form">
+                        <div class="row">
+                                <div class="col-lg-6">
+                                        <div class="form-group">
+                                        <label>Project Name:<span style="color:#3c8dbc;">*</span></label>
+                                        <input type="text" ng-model="ProjectName" placeholder="Enter Project Name" class="form-control"> </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                        <div class="form-group">
+                                    <label>Company Name:<span style="color:#3c8dbc;">*</span></label>
+                                    <input type="text" ng-model="CompanyName" placeholder="Enter Company Name" class="form-control"> </div>
+                                </div>
+                          
+                        </div>
+                                 <div class="row">
+                                <div class="col-lg-6">
+                                        <div class="form-group">
+                                        <label>From:<span style="color:#3c8dbc;">*</span></label>
+                                        <input type="date" id="start_date" ng-model="firstDate" placeholder="12/11/2017" class="form-control datepick"> </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                                <div class="form-group">
+                                                <label>To:<span style="color:#3c8dbc;"></span></label>
+                                                <input input type="text"  class="form-control" ng-model="firstdate" placeholder="12/11/2017" onblur="compareDate()"> </div>
+                                                </div>
+                        </div>
+                    </form>
+                    <div class="modal-footer text-center">
+                            <button type="button" class="mb-sm btn btn-primary btn-outline" ng-click="addTracking(ProjectName,CompanyName,firstDate,firstdate,CurEmployeeId,Employee_First_Name,Employee_Last_Name)">Add</button>
+                            <button type="reset" class="mb-sm btn btn-danger btn-outline " ng-click="Clear()" data-dismiss="modal">Close</button>
+                        </div>
+                </div>
+              
+            </div>
+        </div>
+    </div>
+    <!--Add Tracking Project modal end-->
+
+
+    <!-- Edit Tracking Project Modal Start -->
+    <div class="modal fade bs-example-modal-lg" ng-if="userinfodata.RoleId==5" id="EditTrackModal" tabindex="-1" role="dialog"
+    aria-labelledby="myLargeModalLabel">
+    <div class="modal-dialog modal-md" role="document">
+    <div class="modal-content">
+            <button type="button" style="padding: 1%;" class="close" data-dismiss="modal">&times;</button> 
+    <div class="">
+    <section>
+    <!-- Page content-->
+    <div class="">
+            <h5 class="text-center"style="
+            font-size: 142%;
+            color: black;
+        "><b>Edit Project Details</b></h5>
+ 
+    <!-- START row-->
+    <div class="row">
+    <div class="col-sm-12">
+    <!-- START panel-->
+    <div class="panel panel-default TMP_UpdateProfile_overflow1" style="
+    height: 230px;
+    margin: 2%;
+">
+    <div class="panel-body">
+    <form role="form">
+    <div class="row">
+    <div class="col-lg-6">
+    <div class="form-group">
+    <label>Project name
+    <span
+    style="color:#3c8dbc;">*</span>
+    </label>
+    <input type="text" placeholder="Enter Project name" ng-model="track.ProjectName" class="form-control" readonly="readonly">
+    </div>
+    </div>
+    <div class="col-lg-6">
+            <div class="form-group">
+            <label>Company Name
+            <span
+            style="color:#3c8dbc;">*</span>
+            </label>
+            <input type="text" placeholder="Enter Project name" ng-model="track.CompanyName" class="form-control" readonly="readonly">
+            </div>
+            </div>
+   
+    </div>
+    <div class="row">
+            <div class="col-lg-6">
+                    <div class="form-group">
+                    <label>From:
+                    <span
+                    style="color:#3c8dbc;">*</span>
+                    </label>
+                    <input type="text" id="dateInput" id="input" ng-model="track.FromDate" class="form-control datepick" readonly="readonly"> </div>
+                    </div>
+                    <div class="col-lg-6">
+                            <div class="form-group">
+                            <label>To:
+                            <span
+                            style="color:#3c8dbc;">*</span>
+                            </label>
+                            <input type="date" id="dateInput" id="input" ng-model="track.ToDate" class="form-control datepick"> </div>
+                            </div>
+           
+            </div>
+    <div class="text-center">
+    <button type="submit" class="mb-sm btn btn-primary btn-outline" ng-click="editTrackingProject(track.Id,track.UserId)">Update</button>
+    <!--<button type="submit" class="mb-sm btn btn-warning btn-outline">Disengage</button> -->
+    
+    </div>
+    </form>
+    </div>
+    </div>
+    <!-- END panel-->
+    </div>
+    </div>
+    
+    <!-- END row-->
+    </div>
+  <!--  </section> -->
+    </div>
+    </div>
+    </div>
+    </div>
+ <!-- Edit Tracking Project Modal End -->
+        
+        <!--Start Edit employee details modal -->
+        <div class="modal fade bs-example-modal-lg" ng-if="userinfodata.RoleId==5" id="editEmployee" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+        <button type="button" style="padding: 1%;" class="close" data-dismiss="modal">&times;</button>  
+        <div class="">
+        <section>
+
+        <!-- Page content-->
+        <div class="">
+        <h5 class="text-center"style="
+        font-size: 142%;
+        color: black;
+    "><b>Edit Employee Details</b></h5>
+        <!-- START row-->
+        <div class="row">
+        <div class="col-sm-12">
+        <!-- START panel-->
+        <div class="panel panel-default TMP_UpdateProfile_overflow" style="
+        height: 520px;
+        margin: 2%;
+        margin-top:0%;
+        
+    ">
+        <div class="panel-body">
+        <form role="form">
+        <div class="row">
+        <div class="col-lg-4">
+        <div class="form-group">
+        <label>Employee
+        No.
+       <!-- <span
+        style="color:#3c8dbc;">*</span>-->
+        </label>
+        <input type="text" placeholder="Enter employee no." ng-model="employee.EmployeeId" class="form-control" readonly="readonly">
+        </div>
+        </div>
+        <div class="col-lg-4">
+        <div class="form-group">
+        <label>Employee
+        First
+        Name
+       <!-- <span
+        style="color:#3c8dbc;">*</span>-->
+        </label>
+        <input type="text" placeholder="Enter Employee First_Name " ng-model="employee.FirstName" class="form-control" readonly="readonly"> </div>
+        </div>
+        <div class="col-lg-4">
+                <div class="form-group">
+                <label>Employee
+                Last
+                Name
+               <!-- <span
+                style="color:#3c8dbc;"></span>-->
+                </label>
+                <input type="text" placeholder="Enter Employee Last_Name" ng-model="employee.LastName" class="form-control" readonly="readonly"> </div>
+                </div>
+        </div>
+        <div class="row">
+        
+        <!--<div class="col-lg-6">
+        <div class="form-group">
+        <label>Highest Qualification
+        <span
+        style="color:#3c8dbc;">*</span>
+        </label>
+        <input type="text" placeholder="Enter Qualification" ng-model="employee.HighestQualification" class="form-control"> </div>
+        </div> -->
+        
+       <!-- <div class="col-lg-4">
+          <div class="form-group">
+          <label>Highest Qualification
+          <span
+          style="color:#3c8dbc;">*</span>
+          </label>
+          <select class="form-control" ng-model="employee.QualificationId" ng-change="qChange(employee.QualificationId)" ng-options="qualification.Id as qualification.QualificationName for qualification in qualifications">
+          <option value="null">--
+          Select
+          Qualification
+          --</option>
+          </select>
+          </div>
+          </div> -->
+        
+       
+        <!--<div class="col-lg-6">
+        <div class="form-group">
+        <label>Designation
+        <span
+        style="color:#3c8dbc;">*</span>
+        </label>
+        <input type="text" placeholder="Enter Designation" ng-model="employee.Designation" class="form-control"> </div>
+        </div> -->
+      <!--  <div class="col-lg-4">
+            <div class="form-group">
+            <label>Designation
+            <span
+            style="color:#3c8dbc;">*</span>
+            </label>
+            <select class="form-control" ng-model="employee.DesignationId" ng-change="dChange(employee.DesignationId)" ng-options="designation.Id as designation.DesignationName for designation in designations">
+            <option value="null">--
+            Select
+            Designation
+            --</option>
+            </select>
+            </div>
+            </div> -->
+
+
+
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Email Id
+                       <!-- <span
+                                style="color:#3c8dbc;">*</span>-->
+                    </label>
+                    <input type="email" placeholder="Enter Email Id" ng-model="employee.email" class="form-control" disabled> </div>
+            </div>
+
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Designation
+                        <span
+                                style="color:#3c8dbc;"></span>
+                    </label>
+                    <input type="text" placeholder="Enter Designation" ng-model="employee.designation" class="form-control" readonly="readonly"> </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Qualification
+                        <span
+                                style="color:#3c8dbc;"></span>
+                    </label>
+                    <input type="text" placeholder="Enter Qualification" ng-model="employee.qualification" class="form-control" readonly="readonly"> </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+        
+        <div class="col-lg-4">
+        <div class="form-group">
+        <label>Prior Experience
+        (Years)
+        <span
+        style="color:#3c8dbc;"></span>
+        </label>
+        <input type="text" onkeypress="javascript:return isDecimalPt(event)" placeholder="Enter Prior Experience" ng-model="employee.PriorExprience" class="form-control" readonly="readonly"> </div>
+        </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Date of Joining
+                        <!--<span
+                                style="color:#3c8dbc;">*</span>-->
+                    </label>
+                    <input type="date" id="dateInput" id="input" ng-model="employee.DateOfJoining" class="form-control datepick" readonly="readonly"> </div>
+                <!--<input type="text" placeholder="2017/11/22" class="form-control" ng-model="employee.DateOfJoining"> </div>-->
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Date of Birth
+                       <!-- <span
+                                style="color:#3c8dbc;">*</span>-->
+                    </label>
+                    <input type="date" id="dateInput" id="input"  ng-model="employee.DateOfBirth" class="form-control datepick" readonly="readonly"> </div>
+
+                <!--<input type="text" placeholder="2017/11/22" ng-model="employee.DateOfBirth" class="form-control"> </div>-->
+            </div>
+
+        </div>
+        <div class="row">
+       
+        <div class="col-lg-4">
+        <div class="form-group">
+        <label>Reporting
+        Manager
+     <!--   <span
+        style="color:#3c8dbc;">*</span>-->
+        </label>
+            <input type="email" placeholder="Enter Email Id" ng-model="employee.reportsToName" class="form-control" disabled>
+        
+       <!-- <select class="form-control" ng-model="employee.ReportingManager" ng-change="rhChange(employee.ReportingManager)" ng-options="m.EmployeeId as m.ManagerName for m in managers">
+        <option value="null"> &#45;&#45;
+        Manager
+        -&#45;&#45;</option>
+        
+        </select>-->
+        
+        </div>
+        </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Business Unit
+                        <!--<span
+                        style="color:#3c8dbc;">*</span>-->
+                    </label>
+                    <!-- <select class="form-control" ng-model="employee.BuId" ng-change="buChange(employee.BuId)" ng-options="bu.Id as bu.buName for bu in bumaster">
+                     <option value="null">&#45;&#45;
+                     Select
+                     Status
+                     Master
+                     &#45;&#45;</option>
+                     </select>-->
+                    <input type="email" placeholder="Business Unit Name" ng-model="employee.BuName" class="form-control" disabled>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Integra Experience
+                        (Years)
+                        <span
+                                style="color:#3c8dbc;"></span>
+                    </label>
+                    <input type="text" onkeypress="javascript:return isDecimalPt(event)" placeholder="Enter Integra Experience" ng-model="employee.integraExperience" class="form-control" readonly="true"> </div>
+            </div>
+
+        <!-- <div class="col-lg-6">
+        <div class="form-group">
+        <label>Availability
+        Status
+        <span
+        style="color:#3c8dbc;">*</span>
+        </label>
+        
+        
+        
+        <select class="form-control" ng-model="employee.AvailabilityStatus">
+        <option ng-repeat="AvailabilityStatus in AvailabilityStatuses" value="{{AvailabilityStatus}}">{{AvailabilityStatus}}</option>
+        </select>
+        
+        </div>
+        </div> -->
+
+        </div>
+        
+        
+        <div class="row">
+        <div class="col-lg-4">
+        <div class="form-group">
+        <label>Contact No.
+        <span
+        style="color:#3c8dbc;">*</span>
+        </label>
+        <input id="tbNumbers" onkeypress="javascript:return isNumber(event)" minlength="8" maxlength="15" ng-model="employee.ContactNo" placeholder="Enter Contact No." class="form-control" readonly="true">
+        <!-- <input id="numbers" minlength="8" maxlength="15" id="ContactNo" name="ContactNo" placeholder="Enter Contact No." ng-model="employee.ContactNo" class="form-control"> -->
+        </div>
+        </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Role
+                        <span
+                                style="color:#3c8dbc;">*</span>
+                    </label>
+                    <select class="form-control" ng-model="employee.RoleId" ng-change="rChange(employee.RoleId)" ng-options="role.RoleID as role.Name for role in roles">
+                        <option value="null">--
+                            Select
+                            Role
+                            --</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Primary Skills
+                        <span
+                                style="color:#3c8dbc;">*</span>
+                    </label>
+                    <select class="form-control" ng-model="employee.PrimarySkill" ng-change="psChange(employee.PrimarySkill)" ng-options="skill.SkillId as skill.SkillName for skill in skillmasterlist">
+                        <option value="null">--
+                            Select
+                            Primary
+                            Skill
+                            --</option>
+
+
+                    </select>
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row">
+        <!--<div class="col-lg-6">
+        <div class="form-group">
+        <label>Date of Leaving
+        <span
+        style="color:#3c8dbc;"></span>
+        </label>
+        
+        <input type="date" id="dateInput" id="input" ng-model="employee.DateOfLeaving" class="form-control datepick"> </div>
+        
+        <<input type="text" placeholder="2017/11/22" class="form-control" ng-model="employee.DateOfLeaving"> </div>
+        </div> -->
+        
+        <div class="col-lg-4">
+            <div class="form-group">
+            <label>Availability
+            <span
+            style="color:#3c8dbc;">*</span>
+            </label>
+            <select class="form-control" ng-model="employee.Availability" ng-change="statusChange(employee.Availability)" ng-options="status.Id as status.StatusName for status in statusmaster">
+            <option value="null">--
+            Select
+            Status
+            Master
+            --</option>
+            </select>
+            
+            </div>
+            </div>
+        
+
+            <div class="col-lg-4">
+                <div class="form-group">
+                    <label>Is Reporting
+                        Head
+                        <span
+                                style="color:#3c8dbc;">*</span>
+                    </label>
+                    <select class="form-control" ng-model="employee.IsReportingHead" ng-change="repChange(employee.IsReportingHead)" ng-options="IsReportingHead.value as IsReportingHead.name for IsReportingHead in IsReportingHeads">
+                    </select>
+                </div>
+            </div>
+
+        
+        </div>
+        <div class="row">
+        
+        <!--<div class="col-lg-6">
+        <div class="form-group">
+        <label>Password
+        <span
+        style="color:#3c8dbc;">*</span>
+        </label>
+        <input type="text" placeholder="Enter Password" ng-model="employee.Password" class="form-control"> </div>
+        </div> -->
+        </div>
+        <div class="row">
+        
+        </div>
+        <div class="text-center">
+        <button type="submit" class="mb-sm btn btn-primary btn-outline" ng-click="updateEmployee(employee.EmployeeId,employee.RoleId,employee.PrimarySkill,employee.integraExperience,employee.IsReportingHead,employee.Availability)">Update</button>
+
+            <!--<button type="submit" class="mb-sm btn btn-warning btn-outline">Disengage</button> -->
+       <!-- <button type="reset" class="mb-sm btn btn-danger btn-outline " data-dismiss="modal">Close</button> -->
+        </div>
+        </form>
+        </div>
+        </div>
+        <!-- END panel-->
+        </div>
+        </div>
+        <!-- END row-->
+        </div>
+        </section>
+        </div>
+        </div>
+        </div>
+        </div>
+        <!--End Edit employee details modal -->
+        <!-- Small modal -->
+        <div class="modal fade bs-example-modal-lg" ng-if="userinfodata.RoleId==3" id="editEmployeeStatus" tabindex="-1" role="dialog"
+        aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-md" role="document">
+        <div class="modal-content">
+        <div class="">
+        <section>
+        <!-- Page content-->
+        <div class="">
+                <h5 class="text-center"style="
+                font-size: 142%;
+                color: black;
+            "><b>Edit Employee Details</b></h5>
+        <!-- START row-->
+        <div class="row">
+        <div class="col-sm-12">
+        <!-- START panel-->
+        <div class="panel panel-default TMP_UpdateProfile_overflow1">
+        <div class="panel-body">
+        <form role="form">
+        <div class="row">
+        <div class="col-lg-6">
+        <div class="form-group">
+        <label>Employee
+        No.
+        <span
+        style="color:#3c8dbc;">*</span>
+        </label>
+        <input type="text" placeholder="Enter employee no." ng-model="employee.EmployeeId" class="form-control" readonly="readonly">
+        </div>
+        </div>
+        
+        <div class="col-lg-6">
+        <div class="form-group">
+        <label>Availability
+        <span
+        style="color:#3c8dbc;">*</span>
+        </label>
+        
+        <!--<select class="form-control" ng-model="employee.Availability" ng-change="asChange(employee.Availability)" ng-options="AvailabilityStatus for AvailabilityStatus in AvailabilityStatuses">
+        
+        </select> -->
+        <select class="form-control" ng-model="employee.Availability" ng-change="statusChange(employee.Availability)" ng-options="status.Id as status.StatusName for status in statusmaster">
+          <option value="null">--
+          Select
+          Status
+          Master
+          --</option>
+          </select>
+        </div>
+        </div>
+        </div>
+        <div class="text-center">
+        <button type="submit" class="mb-sm btn btn-primary btn-outline" ng-click="updateEmployeeStatus(employee.EmployeeId,employee.Availability)">Update</button>
+        <!--<button type="submit" class="mb-sm btn btn-warning btn-outline">Disengage</button> -->
+        
+        <button type="submit" ui-sref="home" class="mb-sm btn btn-danger btn-outline" data-dismiss="modal">Close</button>
+        </div>
+        </form>
+        </div>
+        </div>
+        <!-- END panel-->
+        </div>
+        </div>
+        
+        <!-- END row-->
+        </div>
+      <!--  </section> -->
+        </div>
+        </div>
+        </div>
+        </div>
+    </article>
+    <article ng-if="!showInputsArticleWithInput">
+        <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiMWY3MjNlOTEtZTgwYS00ZTQzLTlhNGItMDczODZhNTE3OGY3IiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>
+        <!--<iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiNzFkZTQzMjQtMGVmYS00OTU5LTk4NTctNjgxODM2YTBmZmY3IiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>-->
+       <!-- <iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiMTBmMmU0YjAtOTZkMC00MjUyLWE0OWMtZjYwYmUwYzRlZjZhIiwidCI6IjdiMjJiNGQ1LTMzZDktNDk1Ni04ZDdmLWE2NTc4MTVmODIwMyJ9" frameborder="0" allowFullScreen="true"></iframe>-->
+        <!--<iframe width="100%" height="800px" src="https://app.powerbi.com/view?r=eyJrIjoiNzliMzk5ODAtMDY0Ni00Mjg0LWJhZWYtYzQxNjE1OTc5Y2ZiIiwidCI6IjY2N2E5YmIxLWQ3NjMtNDY2NC05NDQ1LTAxNDMwNTdiNGQ5NSJ9" frameborder="0" allowFullScreen="true"></iframe>-->
+    </article>
+</div>
+<!-- START panel-->
+
+<!-- START table-responsive-->
+
+<script type="text/javascript">
+document.getElementById("wrap").addEventListener("scroll", function () {
+var translate = "translate(0," + this.scrollTop + "px)";
+this.querySelector("thead").style.transform = translate;
+});
+
+function isNumber(evt) {
+var iKeyCode = (evt.which) ? evt.which : evt.keyCode
+if (iKeyCode != 46 && iKeyCode > 31 && (iKeyCode < 48 || iKeyCode > 57))
+    return false;
+
+return true;
+} 
+
+function isDecimalPt(evt) {
+	evt = (evt) ? evt : window.event;
+var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode == 8 || charCode == 37) {
+      return true;
+    } else if (charCode == 46 && $(this).val().indexOf('.') != -1) {
+      return false;
+    } else if (charCode > 31 && charCode != 46 && (charCode < 48 || charCode > 57)) {
+      return false;
+    }
+    return true;
+} 
+
+/*$('#decimalPt, .decimalPt').keypress(function(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode == 8 || charCode == 37) {
+      return true;
+    } else if (charCode == 46 && $(this).val().indexOf('.') != -1) {
+      return false;
+    } else if (charCode > 31 && charCode != 46 && (charCode < 48 || charCode > 57)) {
+      return false;
+    }
+    return true;
+  });*/
+function compareDate() {
+    var str = document.getElementById("start_date").value;
+    var end = document.getElementById("end_date").value;
+    var year = str.substring(0,4);
+    var month = str.substring(5,7);
+    var date = str.substring(8,10);
+    var endYear = end.substring(0,4);
+    var endMonth = end.substring(5,7);
+    var endDate = end.substring(8,10);
+    var startDate = new Date(year, month-1, date);
+    var endDate = new Date(endYear, endMonth-1, endDate);
+
+    if (startDate > endDate) {
+        alert('start date should be less than end date');
+        return false;
+    } else if (startDate =! null && endDate == null) {
+        return true;
+    }
+    else { return true; }
+}
+
+</script>

@@ -1,0 +1,401 @@
+<style>
+    .form-control {
+        width: 100%;
+        height: 35px;
+        padding: 6px 3px;
+        background-color: #fff;
+        background-image: none;
+        border: 1px solid #dde6e9;
+        border-radius: 4px;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+        transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    }
+
+        #wrap {
+        overflow: auto;
+        height: 300px;
+        }
+</style>
+<div class="wrapper">
+    <!-- Main section-->
+    <section>
+        <!-- Page content-->
+        <div class="content-wrapper">
+            <h5 class="text-center">Resource Skills</h5>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <form role="form">
+                        <div class="clearfix">
+                            <div class="col-lg-2">
+                                <div class="form-group">
+                                    <label>Category:<span
+                                        style="color:#3c8dbc;">&nbsp;*</span></label>
+                                    <select class="form-control" ng-model="category" ng-options="ca.CategoryId as ca.CategoryName for ca in categorylist" ng-change="getskilllist(category)">
+                                        <option value="">--Select Category--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="form-group">
+                                    <label>Skills:<span
+                                        style="color:#3c8dbc;">&nbsp;*</span></label>
+                                    <select class="form-control" ng-model="skill" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
+                                        <option value="">--Select Skills--</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="form-group">
+                                    <label>Rating:<span
+                                        style="color:#3c8dbc;">&nbsp;*</span></label>
+                                    <select class="form-control" ng-model="rating">
+                                        <option value="">--Select Rating--</option>
+                                       <!-- <option >All</option> -->
+                                       <select-all values="ratings"><option selected="">Select All</option></select-all>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col-lg-2">
+                                    <div class="form-group">
+                                        <label>Availability:<span
+                                            style="color:#3c8dbc;">&nbsp;*</span></label>
+                                        <select class="form-control" ng-model="Availability" ng-options="avail.Id as avail.StatusName for avail in statuslist">
+                                            <option value="">--Select Availability--</option>
+                                        </select>
+                                    </div>
+                                </div>
+                           <!-- <div class="col-lg-2">
+                                <div class="form-group">
+                                    <label>Availablity:</label>
+                                    <select class="form-control" ng-model="availablity">
+                                        <option value>--Select Availablity--</option>
+                                        <option value="yes">Yes</option>
+                                        <option value="no">No</option>
+                                    </select>
+                                </div>
+                            </div> -->
+                            <div class="col-lg-2">
+                                <div style="margin-top: 23px;">
+                                    <button ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==4 || userinfodata.RoleId==6" type="submit" ng-click="searchskill(category,skill,rating,Availability)"
+                                        class="mb-sm btn-lg btn btn-primary btn-outline ">Search</button>
+                                    <button ng-if="userinfodata.RoleId==3 || userinfodata.RoleId==2 || userinfodata.RoleId==7" type="submit" ng-click="searchskillformanager(category,skill,rating,Availability)"
+                                        class="mb-sm btn-lg btn btn-primary btn-outline ">Search</button>
+                                        
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+                    </form>
+                </div>
+            </div> 
+            <!-- START panel-->
+            <div id="wrap">
+                    <table id="table-ext-1" class="table table-bordered table-hover">
+                        <thead style="background: #ddd;">
+                            <tr style="border-bottom: 1px solid #eee;">
+                                <th>No.</th>
+                              <!--  <th>Photo</th> -->
+                                <th>Employee No.</th>
+                                <th>Employee Name</th>
+                                <th>Designation</th>
+                                <th>Email</th>
+                                <th>Reporting Head</th>
+                                <th>Prior Exp.</th>
+                                <th>Integra Exp.</th>
+                                <th>Total Exp.</th>
+                                <th>Primary Skills</th>
+                                <!--<th>Availability</th> -->
+                                <th ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3 || userinfodata.RoleId==2 || userinfodata.RoleId==6 || userinfodata.RoleId==7">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==4 || userinfodata.RoleId==6">
+                            <tr ng-repeat="employee in filteredEmployee = (employeedata | filter : searchemp)" style="border:1px solid #e7e7e7;">
+                                <td>{{$index+1}}</td>
+                               <!-- <td>
+                                    <div class="media">
+                                        <img src="assets/images/user.ico" alt="Image" class="img-responsive img-circle"> </div>
+                </div>
+                </td>-->
+                <td>{{employee.EmployeeId}}</td>
+                <td>{{employee.FirstName}}&nbsp;{{employee.LastName}}</td>
+                <td>{{employee.Designation}}</td>
+                <td>{{employee.Email}}</td>
+                <td>{{employee.reportingmanager}}</td>
+                <td>{{employee.PriorExprience}}</td>
+                <td>{{employee.integraExperience}}</td>
+                <td>{{employee.totalExperience}}</td>
+                <td>{{employee.PrimarySkill}}</td>
+               <!-- <td>{{employee.AvailabilityStatus}}</td> -->
+                <td ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==6">
+                    <a data-toggle="modal" ng-click="skillUpdate(employee.UserId,employee.EmployeeId,employee.FirstName,employee.LastName,employee.RoleID)"
+                        data-target="#ViewSkillsModal" data-whatever="@mdo">View Skills</a>
+                </td>
+                <!--<td> <a data-toggle="modal" ng-click="skillUpdate(employee.UserId)" data-target="#exampleModal" data-whatever="@mdo"><i class="fa fa-plus" data-toggle="tooltip" data-placement="top" title="Add Skills"></i>&nbsp; &nbsp; &nbsp;</a> </td>-->
+                </tr>
+                <tr ng-show="filteredEmployee.length == 0" style="border:1px solid #e7e7e7;">
+                    <td colspan="15" style="font-weight: bold;">No Data found</td>
+                </tr>
+                </tbody>
+                <tbody ng-if="userinfodata.RoleId==3 || userinfodata.RoleId==2">
+                    <tr ng-repeat="employee in filteredEmployee = (managerEmployeeList | filter : searchemp)" style="border:1px solid #e7e7e7;">
+                        <td>{{$index+1}}</td>
+                        <td>
+             <div class="media">
+             <img src="assets/images/user.ico" alt="Image" class="img-responsive img-circle"> </div>
+            </div>
+            </td>
+            <td>{{employee.EmployeeId}}</td>
+            <td>{{employee.FirstName}}{{employee.LastName}}</td>
+            <td>{{employee.Designation}}</td>
+            <td>{{employee.Email}}</td>
+            <td>{{employee.reportingmanager}}</td>
+            <td>{{employee.PriorExprience}}</td>
+            <td>{{employee.integraExperience}}</td>
+            <td>{{employee.totalExperience}}</td>
+            <td>{{employee.PrimarySkill}}</td>
+           <!-- <td>{{employee.AvailabilityStatus}}</td> -->
+            <td>
+                <a data-toggle="modal" ng-click="skillUpdate(employee.UserId,employee.EmployeeId,employee.FirstName,employee.LastName,employee.RoleID)"
+                    data-target="#ViewSkillsModal" data-whatever="@mdo">View Skills</a>
+            </td>
+            <!--<td> <a data-toggle="modal" ng-click="skillUpdate(employee.UserId)" data-target="#exampleModal" data-whatever="@mdo"><i class="fa fa-plus" data-toggle="tooltip" data-placement="top" title="Add Skills"></i>&nbsp; &nbsp; &nbsp;</a> </td>-->
+            </tr>
+            <tr ng-show="filteredEmployee.length == 0" style="border:1px solid #e7e7e7;">
+                <td colspan="15" style="font-weight: bold;">No Data found</td>
+            </tr>
+            </tbody>
+            <tbody ng-if="userinfodata.RoleId==7">
+                    <tr ng-repeat="employee in filteredEmployee = (buEmployeeList | filter : searchemp)" style="border:1px solid #e7e7e7;">
+                        <td>{{$index+1}}</td>
+                        <td>
+             <div class="media">
+             <img src="assets/images/user.ico" alt="Image" class="img-responsive img-circle"> </div>
+            </div>
+            </td>
+            <td>{{employee.EmployeeId}}</td>
+            <td>{{employee.FirstName}}{{employee.LastName}}</td>
+            <td>{{employee.Designation}}</td>
+            <td>{{employee.Email}}</td>
+            <td>{{employee.reportingmanager}}</td>
+            <td>{{employee.PriorExprience}}</td>
+            <td>{{employee.integraExperience}}</td>
+            <td>{{employee.totalExperience}}</td>
+            <td>{{employee.PrimarySkill}}</td>
+           <!-- <td>{{employee.AvailabilityStatus}}</td> -->
+            <td>
+                <a data-toggle="modal" ng-click="skillUpdate(employee.UserId,employee.EmployeeId,employee.FirstName,employee.LastName,employee.RoleID)"
+                    data-target="#ViewSkillsModal" data-whatever="@mdo">View Skills</a>
+            </td>
+            <!--<td> <a data-toggle="modal" ng-click="skillUpdate(employee.UserId)" data-target="#exampleModal" data-whatever="@mdo"><i class="fa fa-plus" data-toggle="tooltip" data-placement="top" title="Add Skills"></i>&nbsp; &nbsp; &nbsp;</a> </td>-->
+            </tr>
+            <tr ng-show="filteredEmployee.length == 0" style="border:1px solid #e7e7e7;">
+                <td colspan="15" style="font-weight: bold;">No Data found</td>
+            </tr>
+            </tbody>
+            </table>
+        </div>
+        <!-- END table-responsive-->
+        <div class="panel-footer">
+        <div class="input-group">
+    <input type="text" ng-model="searchemp" placeholder="Search" class="col 2 form-control" style="
+padding: 0px 50px 0px 15px;">
+  
+    <span class="input-group-btn"></span>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Page footer-->
+<!--View Skills Modal Start-->
+<div class="modal fade" id="ViewSkillsModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" data-backdrop="static"
+    data-keyboard="false">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background:#a3bbca; color:white;">
+                <a type="button" ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==3" class="pull-right btn btn-box-tool" style="color:white;">
+                    <img src="assets/images/icons/add.png" data-toggle="modal" data-target="#AddSkillModal" title="Add Skills"
+                        style="cursor:pointer;width: 30px;">
+                </a>
+                <h4 class="modal-title" id="exampleModalLabel">Skills for {{Employee_First_Name}} {{Employee_Last_Name}} ({{CurEmployeeId}})</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12">
+                    <div class="box box-info ">
+                        <div class="box-body EMS_PanelHeading">
+                            <div class="table-responsive">
+                                <table class="table no-margin text-center">
+                                    <thead class="theadbackgroud">
+                                        <tr style="background: #ebecec;">
+                                            <th>Category Name</th>
+                                            <th>Skill Name</th>
+                                            <th>Rating</th>
+                                            <th>Modified By</th>
+                                            <th>Modified On</th>
+                                            <th ng-if="userinfodata.RoleId==5">Action</th>
+                                            <!--   <th>Modified by </th>
+                                           <th>Action </th>-->
+                                        </tr>
+                                    </thead>
+                                    <tbody ng-repeat="skill in skilldata">
+                                        <tr ng-if="skill">
+                                            <td>{{skill.categoryName}}</td>
+                                            <td>{{skill.skillName}}</td>
+                                            <td>{{skill.rating}}
+                                            </td>
+                                            <td ng-if="skill.ModifiedBy==null">{{skill.CreatedBy}}</td>
+                                            <th ng-if="skill.ModifiedBy!=null">{{skill.ModifiedBy}}</th>
+                                            <td ng-if="skill.ModifiedDate==null">{{skill.CreatedDate}}</td>
+                                            <th ng-if="skill.ModifiedDate!=null">{{skill.ModifiedDate}}</th>
+                                            <!--<td>{{skill.ModifiedBy}}</td>
+                                             <th>{{skill.ModifiedDate}}</th>-->
+                                            <td ng-if="skill.categoryName">
+                                                <a href="" title="Edit Skills" ng-if="userinfodata.RoleId==5" ng-click="updateskill(skill.categoryName,skill.skillName,skill.rating,skill.EmployeeSkillId,CurEmployeeId,Employee_First_Name,Employee_Last_Name)"
+                                                    data-toggle="modal" data-target="#EditSkillModal" data-whatever="@mdo">
+                                                    <img src="assets/images/icons/edit icon.png" data-toggle="tooltip" data-placement="top"
+                                                        class="width_edit_icon" data-toggle="tooltip" data-placement="top">
+                                                </a>&nbsp;&nbsp;
+                                                <!-- <a href="" ng-if="userinfodata.RoleId==5" title="Delete Skills" ng-click="deleteskills(skill.EmployeeSkillId,CurEmployeeId)"><img src="assets/images/icons/delete icon.png" class="width_edit_icon"></a>  -->
+
+                                                <a href="" ng-if="userinfodata.RoleId==5" title="Delete Skills" ng-click="deleteskills(skill.EmployeeSkillId,CurEmployeeId,Employee_First_Name,Employee_Last_Name,skill.UserId)">
+                                                    <img src="assets/images/icons/delete icon.png" class="width_edit_icon">
+                                                </a>
+
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="reset" class="mb-sm btn btn-danger btn-outline" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--View Skills Modal end-->
+<!--Add Skills modal start-->
+<div class="modal fade" id="AddSkillModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="exampleModalLabel">Add Skill for the Employee {{Employee_First_Name}} {{Employee_Last_Name}} ({{CurEmployeeId}})</h4>
+            </div>
+            <div class="modal-body">
+                <form role="form">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Category :</label>
+                                <select class="form-control" ng-model="category1" ng-options="ca.CategoryId as ca.CategoryName for ca in categorylist" ng-change="getskilllist(category1)">
+                                    <option value>-- Select Category --</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Skills :</label>
+                                <select class="form-control" ng-model="skill1" ng-options="sk.SkillId as sk.SkillName for sk in skilllist">
+                                    <option value>-- Select Skills --</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="form-group">
+                                <label>Rating :</label>
+                                <select class="form-control" ng-model="Rating">
+                                    <option value>-- Select Rating--</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="mb-sm btn btn-primary btn-outline" ng-click="addResourceskills(skill1,Rating,category1,CurEmployeeId,Employee_First_Name,Employee_Last_Name)">Add</button>
+                <button type="reset" class="mb-sm btn btn-danger btn-outline " ng-click="Clear()" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Add Skills modal end-->
+
+<!--Edit Skills modal start-->
+<div class="modal fade" id="EditSkillModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="exampleModalLabel">Edit Skill for the Employee {{Employee_First_Name}} {{Employee_Last_Name}} ({{CurEmployeeId}})</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12">
+                    <div class="box box-info ">
+                        <div class="box-body EMS_PanelHeading">
+                            <div class="table-responsive">
+                                <table class="table no-margin text-center">
+                                    <thead>
+                                        <tr style="background: #ebecec;">
+                                            <th>Category Name</th>
+                                            <th>Skill Name</th>
+                                            <th>Rating</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>{{skill.categoryName}}</td>
+                                            <td>{{skill.skillName}}</td>
+
+                                            <td>
+                                                <select class="form-control" ng-model="skill.Rating" ng-options=" r.RatingID  as r.RatingID  for r in ratings">
+                                                    <option value="">--- Rating ---</option>
+
+                                                </select>
+                                            </td>
+                                        </tr>
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer text-center">
+                <button type="button" class="mb-sm btn btn-primary btn-outline " ng-click="editskill(skill.Rating)">Save</button>
+                <button type="button" class="mb-sm btn btn-danger btn-outline " data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--Edit Skills modal end-->
+<script>
+document.getElementById("wrap").addEventListener("scroll", function () {
+var translate = "translate(0," + this.scrollTop + "px)";
+this.querySelector("thead").style.transform = translate;
+});
+</script>

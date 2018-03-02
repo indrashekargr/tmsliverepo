@@ -1,0 +1,2191 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "v1",
+        "title": "Talent Management System",
+        "description": "TMS Employee Resource Skills Tracking Management System"
+    },
+    "paths": {
+		"/fetchAllEmployeeDataByHR": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchAllEmployeeDataByHR_get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/fetchAllEmployeeDataByHR"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/externalemployeeRepository": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "externalemployeeRepository_get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/externalemployeeRepository"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/fetchCurrentEmployeeDataByHR": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchCurrentEmployeeDataByHR_get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/fetchCurrentEmployeeDataByHR"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/branchlistforhr": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "branchlistforhr_get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/branchlistforhr"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        }, 
+
+        "/fetchAllReportingHeads": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchAllReportingHeads_get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/fetchAllReportingHeads"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        }, 
+        
+        "/roleslistforhr": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "roleslistforhr_get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/roleslistforhr"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/skillmasterlist": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "skillmasterlist_get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/skillmasterlist"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/fetchcategorylist": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchcategorylist_get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/fetchcategorylist"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/fetchstatusmasterlist": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchstatusmasterlist_get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/fetchstatusmasterlist"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/fetchbusinessunitmasterlist": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchbusinessunitmasterlist_get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/fetchbusinessunitmasterlist"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/fetchqualificationList": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchqualificationList_get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/fetchqualificationList"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        
+
+        "/fetchdesignationlist": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchdesignationlist_get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/fetchdesignationlist"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/fetchtrackingskillsforhr": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchtrackingskillsforhr_get",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/fetchtrackingskillsforhr"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/fetchskillslist/{id}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchskillslist_getById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/searchEmployeeResourceSkillsForHR/CategoryId={CategoryId}/SkillId={SkillId}/Rating={Rating}/Availability={Availability}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "searchEmployeeResourceSkillsForHR_getById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "CategoryId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "SkillId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Rating",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Availability",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/searchEmployeeResourceSkillsForManager/CategoryId={CategoryId}/SkillId={SkillId}/Rating={Rating}/Availability={Availability}/ReportingManager={ReportingManager}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "searchEmployeeResourceSkillsForHR_getById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "CategoryId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "SkillId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Rating",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Availability",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }, {
+                        "name": "ReportingManager",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/searchEmployeeResourceSkillsForBuHead/CategoryId={CategoryId}/SkillId={SkillId}/Availability={Availability}/BuId={BuId}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "searchEmployeeResourceSkillsForHR_getById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "CategoryId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "SkillId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Rating",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Availability",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }, {
+                        "name": "ReportingManager",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+      
+
+        "/searchEmployeeResourceSkillsAllRatingForHR/CategoryId={CategoryId}/SkillId={SkillId}/Availability={Availability}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "searchEmployeeResourceSkillsForHR_getById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "CategoryId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "SkillId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                  
+                    {
+                        "name": "Availability",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/searchEmployeeResourceSkillsForBU/CategoryId={CategoryId}/SkillId={SkillId}/Rating={Rating}/Availability={Availability}/BuId={BuId}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "searchEmployeeResourceSkillsForHR_getById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "CategoryId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "SkillId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Rating",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Availability",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    },
+                   
+                    {
+                        "name": "BuId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/fetchAllReportingHeadsupdate/{id}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchAllReportingHeadsupdate_getById",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/addEmployeeResourceSkillsByHR": {
+            "post": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "addEmployeeResourceSkillsByHR",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "addEmployeeSkills",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/addEmployeeDataByHR": {
+            "post": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "addEmployeeDataByHR",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "addEmployeeDataByHR",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/addEmployee"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        "/addskillcategoryforadmin": {
+            "post": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "addskillcategoryforadmin",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "addskillcategoryforadmin",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Category"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/adddemodata": {
+            "post": {
+                "tags": [
+                    "TMS Demo App"
+                ],
+                "operationId": "adddemodata",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "adddemodata",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Demo"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/addstatusmasterbyadmin": {
+            "post": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "addstatusmasterbyadmin",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "addstatusmasterbyadmin",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Status"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/addtrackingemployee": {
+            "post": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "addtrackingemployee",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "addtrackingemployee",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Tracking"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/addbumasterbyadmin": {
+            "post": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "addbumasterbyadmin",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "addbumasterbyadmin",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Bu_Unit"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        
+       
+        "/adddesignationforadmin": {
+            "post": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "adddesignationforadmin",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "adddesignationforadmin",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Designation"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/login": {
+            "post": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "login",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "login",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/login"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/addsubskillcategoryforadmin": {
+            "post": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "addsubskillcategoryforadmin",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "addsubskillcategoryforadmin",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Skillmaster"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/addEmployeeStatusByManager": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "addEmployeeStatusByManager",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "addEmployeeStatusByManager",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/addEmployeeStatusByManager"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/updateEmployeeResourceSkillsByHR": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "updateEmployeeResourceSkillsByHR",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "updateEmployeeSkills",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/updateResourceskills"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/upadateemployeetracking": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "upadateemployeetracking",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "updateEmployeeSkills",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/upadateemployeetracking"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/updateEmployeeDataByHR": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "updateEmployeeDataByHR",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "updateEmployeeDataByHR",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/updateEmployee"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/upadatestatusmasterbyadmin": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "upadatestatusmasterbyadmin",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "updateStatusMaster",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/updateStatusMaster"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/updateskillcategoryforadmin": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "updateskillcategoryforadmin",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "updateSkillMaster",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/updateSkillMaster"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/updatesubskillcategoryforadmin": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "updatesubskillcategoryforadmin",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "updatesubSkillMaster",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/updatesubSkillMaster"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/deleteEmployeeResourceSkillsByHR": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "deleteEmployeeResourceSkillsByHR",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "deleteEmployeeSkills",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/deleteResourceskills"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/deleteEmployeeMasterdetailByHR": {
+            "put": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "deleteEmployeeMasterdetailByHR",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "deleteEmployeeMasterData",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/deleteEmployee"
+                          }
+                    }
+                   
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/fetchResourceSkillDetailsBasedOnUser/{UserId}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchResourceSkillDetailsBasedOnUser_getByUserId",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "UserId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/fetchemployeetracking/{UserId}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchemployeetracking_getByUserId",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "UserId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+
+
+        "/viewSelfEmployeeResourceSkills/{UserId}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "viewSelfEmployeeResourceSkills_getByUserId",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "UserId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+        
+
+        "/fetchEmployeeMasterDetailsBasedOnEmpId/{EmployeeId}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchEmployeeMasterDetailsBasedOnEmpId_getByEmployeeId",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "EmployeeId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/fetchEmployeeMasterDetailsBasedOnBuId/{BuId}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchEmployeeMasterDetailsBasedOnBuId_getByBuId",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "BuId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/fetchEmployeeMasterdetailsByManager/{managerEmpId}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchEmployeeMasterdetailsByManager_getByEmployeeId",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "managerEmpId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/fetchemployeedatabyadmin/{managerEmpId}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchemployeedatabyadmin_getByEmployeeId",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "managerEmpId",
+                        "in": "path",
+                        "required": true,
+                        "type": "integer",
+                        "format": "int32"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+        "/fetchEmployeeMasterDetailsBasedOnUsername/{Username}": {
+            "get": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "fetchEmployeeMasterDetailsBasedOnUsername_getByUsername",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "Username",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                       
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        }
+    },
+  
+    "definitions": {
+        "User": {
+            "type": "object",
+            "properties": {
+                "EmployeeSkillId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "UserId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CategoryId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "SkillId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Rating": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "IsDeleted": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CreatedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "CreatedBy": {
+                    "type": "string"
+                }
+            }
+        },
+        "addEmployee": {
+            "type": "object",
+            "properties": {
+                "EmployeeId": {
+                "type": "string"
+                },
+                "FirstName": {
+                    "type": "string"
+                },
+                "LastName": {
+                    "type": "string"
+                },
+                "Password": {
+                    "type": "string"
+                },
+                "QualificationId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "DesignationId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "RoleId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "BuId":{
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ContactNo": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "BranchId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "PriorExprience": {
+                    "format":"float",
+                    "type": "number"
+                },
+                "totalExperience": {
+                    "format":"decimal",
+                    "type": "number"
+                },
+                "Availability": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "PrimarySkill": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Gender": {
+                    "type": "string"
+                },
+                "AccessToResourceDatabase": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "DateOfBirth": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "DateOfJoining": {
+                    "type": "string",
+                    "format": "date"
+                },
+                "ReportingManager": {
+                    "type": "string"
+                },
+                "IsReportingHead": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CreatedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "CreatedBy": {
+                    "type": "string"
+                },
+                "ModifiedBy": {
+                    "type": "string"
+                }
+            
+            }
+        },
+        
+        "updateEmployee": {
+            "type": "object",
+            "properties": {
+                "integraExperience": {
+                    "format":"float",
+                    "type": "number"
+                },
+                "ModifiedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "RoleId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "PrimarySkill": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "IsReportingHead": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ModifiedBy": {
+                    "type": "string"
+                   
+                },
+                "Availability": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "EmployeeId": {
+                    "type": "string"
+                }
+            }
+        },
+
+
+        "Category": {
+            "type": "object",
+            "properties": {
+                "CategoryId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CategoryName": {
+                    
+                    "type": "string"
+                },
+                "Description": {
+
+                    "type": "string"
+                },
+                
+                "IsDeleted": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CreatedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "CreatedBy": {
+                    "type": "string"
+                }
+            }
+        },
+        "Status": {
+            "type": "object",
+            "properties": {
+                "StatusName": {
+                    "type": "string"
+                },
+                "Description": {
+
+                    "type": "string"
+                },
+                
+                "IsDeleted": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CreatedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+
+        "Demo": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        
+        "Tracking": {
+            "type": "object",
+            "properties": {
+                "ProjectName": {
+                    "type": "string"
+                },
+                "CompanyName": {
+
+                    "type": "string"
+                },
+                
+                "IsDeleted": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "FromDate": {
+                    "type": "string"
+                },
+                "ToDate": {
+                    "type": "string"
+
+                },
+                "UserId": {
+                    "format": "int32",
+                    "type": "integer"
+                }
+            }
+        },
+
+
+        "Bu_Unit": {
+            "type": "object",
+            "properties": {
+                "buName": {
+                    "type": "string"
+                },
+                "Description": {
+
+                    "type": "string"
+                },
+                
+                "IsDeleted": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CreatedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "CreatedBy": {
+                    "type": "string"
+                }
+            }
+        },
+        "Designation": {
+            "type": "object",
+            "properties": {
+                "DesignationName": {
+                    "type": "string"
+                },
+                "IsDeleted": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CreatedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "login": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "Skillmaster": {
+            "type": "object",
+            "properties": {
+                "CategoryId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "SkillName": {
+                    "type": "string"
+                },
+                "Description": {
+
+                    "type": "string"
+                },
+                
+                "IsDeleted": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CreatedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "updateResourceskills": {
+            "type": "object",
+            "properties": {
+                "EmployeeSkillId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "UserId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Rating": {
+
+                    "format": "int32",
+                    "type": "integer"
+                },
+                
+                "ModifiedBy": {
+                    "type": "string"
+                },
+                "ModifiedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+
+        "upadateemployeetracking": {
+            "type": "object",
+            "properties": {
+               "Id": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "UserId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ToDate": {
+                    "type": "string"
+                }
+            }
+        },
+
+        "updateStatusMaster": {
+            "type": "object",
+            "properties": {
+                "Id": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "StatusName": {
+                    "type": "string"
+                },
+                "Description": {
+                    "type": "string"
+                },
+                
+                "ModifiedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+
+        "updateSkillMaster": {
+            "type": "object",
+            "properties": {
+                "CategoryId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "CategoryName": {
+                    "type": "string"
+                },
+                "Description": {
+                    "type": "string"
+                },
+                
+                "date": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+
+        "updatesubSkillMaster": {
+            "type": "object",
+            "properties": {
+                "CategoryId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "SkillName": {
+                    "type": "string"
+                },
+                "Description": {
+                    "type": "string"
+                },
+                
+                "date": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "SkillId": {
+                    "format": "int32",
+                    "type": "integer"
+                }
+            }
+        },
+
+        "addEmployeeStatusByManager": {
+            "type": "object",
+            "properties": {
+                "EmployeeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Availability": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ModifiedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "deleteResourceskills": {
+            "type": "object",
+            "properties": {
+                "EmployeeSkillId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "UserId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ModifiedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        },
+        "deleteEmployee": {
+            "type": "object",
+            "properties": {
+                "EmployeeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "ModifiedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                }
+            }
+        }
+    }
+}

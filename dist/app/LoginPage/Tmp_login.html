@@ -1,0 +1,74 @@
+
+<style>
+.logoTmp {
+    width: 231px;
+    margin-top: -69px;
+}
+.card {
+    background-color: rgb(153, 153, 153);
+    padding: 20px 25px 30px;
+    margin: 0 auto 25px;
+    margin-top: 100px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    border-radius: 2px;
+    -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3);
+}
+.btn.btn-signin {
+    background-color: #2a2076;}
+</style>
+
+
+<div class="clearfix"> 
+<div class="row">
+<div class="col-lg-6" style="background-image: url(assets/images/background12.jpg);background-position: inherit;background-repeat: no-repeat;background-size: cover;">
+        <div class="text-center" style="margin-top:38%"> <img src="assets/images/integra.png" class="logoTmp"> </div>
+        <!-- <h2 style="margin-bottom:35%" class="text-center" class="h2Tmp" style="color:rgba(36, 29, 98, 0.74);">Talent Management System</h2> -->
+        <h2 style="margin-bottom: 44%;color: #061743;margin-top: -6%;" class="text-center">Talent Management System</h2>
+        
+</div>
+
+
+    <div class="col-lg-6" style="
+    background-color: #061743;
+" >
+       
+        <div class="">
+            <div class="card card-container" style="
+            margin-top: 25%;
+            margin-bottom: 40%;
+        ">
+               <!-- <h4 class="text-center"><span class="SpanTmp1">TMS</span> <span class="SpanTmp2">Login</span></h4>-->
+                <p id="profile-name" class="profile-name-card"></p>
+                <form class="form-signin" ng-submit="validateUser(Username,Password)"> <span id="reauth-email" class="reauth-email"></span>
+                <span class="SpanTmp1">Username</span>
+                    <input type="text" id="Username" ng-model="Username" maxlength="50" id="inputEmail" class="form-control" placeholder="Username" autocomplete=off>
+                    <span class="SpanTmp1">Password</span>
+                    <input type="password" id="password" ng-model="Password" maxlength="50" id="inputPassword" class="form-control" placeholder="Password">
+                    <button class="btn btn-lg btn-primary btn-block btn-signin" ng-click="submitted=true" type="submit">Login</button>
+                </form>
+                <!-- /form -->
+                <!-- <a href="#" class="forgot-password">
+                Forgot the password?
+            </a>-->
+            </div>
+            <!-- /card-container -->
+        </div>
+        <!-- /container -->
+    </div>
+</div>
+    <!-- /.row -->
+</div>
+<script>
+
+$('#Username').bind('copy paste', function (e) {
+        e.preventDefault();
+    });
+
+    $('#password').bind('copy paste', function (e) {
+        e.preventDefault();
+    });
+
+</script>
