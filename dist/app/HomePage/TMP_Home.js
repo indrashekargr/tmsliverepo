@@ -257,65 +257,69 @@ $scope.addResourceskills = function(b, c,d,ci,fn,ln) {
     }
 
 
-    // Add Employee Tracking Profile
-   $scope.addTracking = function(a,b,c,d,ci,fn,ln) {
-
-       $scope.firstDate = $filter('date')(c, 'yyyy-MM-dd');
-
-    $("#AddTrakingModal").modal("show");
-    if(a== undefined && b== undefined && c== undefined){
-    alert("Please select all the mandatory fields");
-    }
-    else if(a== null || a== undefined||a==""){
-    alert("Please enter Project Name");
-    }
-
-    else if(b== null || b== undefined||b==""){
-    alert("Please enter Company Name");
-    }
-    else if(c== null ||c== undefined|| c==""){
-    
-    alert("Please select From Date");
-    }
-    else
-    {
-    var newTracking = {
-    "UserId": UserId
-    , "ProjectName": a
-    , "CompanyName": b
-    , "FromDate": $scope.firstDate
-    , "ToDate": d
-    };
-    
-  $scope.CurEmployeeId =ci ;
-    $scope.Employee_First_Name=fn;
-    $scope.Employee_Last_Name =ln;
-    
-    //console.log(newSkills);
-    $http.post(ApiUrlPrefix + 'addtrackingemployee ', newTracking).then(function (response) {
-    //console.log(response);
-        if(response.toDate == null){
-            response.toDate == '';
-        } else {
-            response.toDate == response.toDate;
-        }
-    alert("Employee Tracking data added successfully");
-    //alert(response.data);
-
-    $("#AddTrakingModal").modal("hide");
-    $http.get(ApiUrlPrefix + 'fetchemployeetracking/'+UserId).success(function (data) {
-        $scope.trackdata=data;
-        console.log( $scope.trackdata);
-        //$scope.AddTrackClear();
-        //console.log(data);
-        });
-    },function(error){
-        console.log(error);
-        });
-       // $scope.skillUpdate(UserId,ci,fn,ln);
-        $scope.trackUpdate(UserId,ci,fn,ln);
-        }
-        } 
+  // Add Employee Tracking Profile
+  $scope.addTracking = function(a,b,c,d,e,ci,fn,ln) {
+    // c = $filter('date')($scope.FromDate, 'yyyy-MM-dd');
+    // e = $filter('date')($scope.ToDate, 'yyyy-MM-dd');
+ 
+     $("#AddTrakingModal").modal("show");
+     if(a == undefined && b== undefined && e== undefined){
+     alert("Please select all the mandatory fields");
+     }
+     else if(a== null ||a== undefined||a==""){
+     alert("Please enter Project Name");
+     }
+     else if(e== null || e== undefined||e==""){
+         alert("Please Select Availability Type");
+     }
+     else if(b== null || b== undefined||b==""){
+     alert("Please enter Company Name");
+     }
+     else if(c== null ||c== undefined|| c==""){
+     
+     alert("Please select From Date");
+     }
+     else
+     {
+     var newTracking = {
+     "UserId": UserId
+     , "ProjectName":a
+     , "CompanyName": b
+     , "FromDate":c
+     , "ToDate":d
+     , "type": e
+     };
+     
+   $scope.CurEmployeeId =ci ;
+     $scope.Employee_First_Name=fn;
+     $scope.Employee_Last_Name =ln;
+     
+     //console.log(newSkills);
+     $http.post(ApiUrlPrefix + 'addtrackingemployee ', newTracking).then(function (response) {
+     //console.log(response);
+         if(response.toDate == null){
+             response.toDate == '';
+         } else {
+             response.toDate == response.toDate;
+         }
+     alert("Employee Tracking data added successfully");
+    // $location.path( "/home" );
+     //alert(response.data);
+ 
+     $("#AddTrakingModal").modal("hide");
+     $http.get(ApiUrlPrefix + 'fetchemployeetracking/'+UserId).success(function (data) {
+         $scope.trackdata=data;
+         console.log( $scope.trackdata);
+         //$scope.AddTrackClear();
+         //console.log(data);
+         });
+     },function(error){
+         console.log(error);
+         });
+        // $scope.skillUpdate(UserId,ci,fn,ln);
+         $scope.trackUpdate(UserId,ci,fn,ln);
+         }
+         } 
 
 //Fetch all resource skills data based on userId
 
@@ -833,15 +837,16 @@ $scope.updatetrack= function (Id,UserId,ProjectName,CompanyName,FromDate,ToDate,
     console.log($scope.track);
     $scope.editTrackingProject= function (Id,UserId)
     {
-        var firstdate = $filter('date')(new Date($scope.track.ToDate, 'dd/mm/yyyy'));
+        $scope.firstDate = $filter('date')($scope.track.ToDate, 'yyyy-MM-dd');
+       //var firstdate = $filter('date')(new Date($scope.track.ToDate, 'dd/mm/yyyy'));
         //$scope.track.ToDate = new Date($scope.track.ToDate);
-    if(firstdate == null || firstdate == undefined || firstdate  == ""){
+    if($scope.firstDate == null || $scope.firstDate == undefined || $scope.firstDate  == ""){
     alert("Please select To date");
     } else {
        
     var track = {
        
-    "ToDate": firstdate ,
+    "ToDate":$scope.track.ToDate,
     "Id":Id,
     "UserId":  UserId
     }
@@ -849,6 +854,8 @@ $scope.updatetrack= function (Id,UserId,ProjectName,CompanyName,FromDate,ToDate,
     $http.put(ApiUrlPrefix + 'upadateemployeetracking', track).success(function (data) {
     //console.log(data);
     alert("Project closed successfully");
+
+    
     $("#EditTrackModal").modal("hide");
     $http.get(ApiUrlPrefix + 'fetchemployeetracking/'+UserId).success(function (data) {
     $scope.trackdata=data;

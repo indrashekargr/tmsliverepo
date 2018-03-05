@@ -1933,16 +1933,21 @@
 
                     "type": "string"
                 },
-                
+                "type": {
+                    "format": "int32",
+                    "type": "integer"
+                },
                 "IsDeleted": {
                     "format": "int32",
                     "type": "integer"
                 },
                 "FromDate": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "date-time"
                 },
                 "ToDate": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "date-time"
 
                 },
                 "UserId": {
@@ -2055,7 +2060,6 @@
                 }
             }
         },
-
         "upadateemployeetracking": {
             "type": "object",
             "properties": {
@@ -2068,7 +2072,8 @@
                     "type": "integer"
                 },
                 "ToDate": {
-                    "type": "string"
+                    "type": "string",
+                    "format": "date-time"
                 }
             }
         },

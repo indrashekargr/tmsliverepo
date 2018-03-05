@@ -758,17 +758,35 @@ background: #ddd;
                                 <div class="col-lg-6">
                                         <div class="form-group">
                                         <label>From:<span style="color:#3c8dbc;">*</span></label>
-                                        <input type="date" id="start_date" ng-model="firstDate" placeholder="12/11/2017" class="form-control datepick"> </div>
+                                        <input type="date" id="start_date" ng-model="FromDate" placeholder="12/11/2017" class="form-control datepick"> </div>
                                         </div>
                                         <div class="col-lg-6">
                                                 <div class="form-group">
                                                 <label>To:<span style="color:#3c8dbc;"></span></label>
-                                                <input input type="text"  class="form-control" ng-model="firstdate" placeholder="12/11/2017" onblur="compareDate()"> </div>
+                                                <input input type="date" id="end_date" class="form-control" ng-model="ToDate" placeholder="12/11/2017" onblur="compareDate()"> </div>
                                                 </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="form-group">
+                                <label>Availability
+                                <span
+                                style="color:#3c8dbc;">*</span>
+                                </label>
+                                <select class="form-control" ng-model="type" ng-change="statusChange(type)" ng-options="status.Id as status.StatusName for status in statusmaster">
+                                <option value="">--
+                                Select
+                                Status
+                                Master
+                                --</option>
+                                </select>
+                                
+                                </div>
+                                </div>
                         </div>
                     </form>
                     <div class="modal-footer text-center">
-                            <button type="button" class="mb-sm btn btn-primary btn-outline" ng-click="addTracking(ProjectName,CompanyName,firstDate,firstdate,CurEmployeeId,Employee_First_Name,Employee_Last_Name)">Add</button>
+                            <button type="button" class="mb-sm btn btn-primary btn-outline" ng-click="addTracking(ProjectName,CompanyName,FromDate,ToDate,type,CurEmployeeId,Employee_First_Name,Employee_Last_Name)">Add</button>
                             <button type="reset" class="mb-sm btn btn-danger btn-outline " ng-click="Clear()" data-dismiss="modal">Close</button>
                         </div>
                 </div>
@@ -845,7 +863,7 @@ background: #ddd;
            
             </div>
     <div class="text-center">
-    <button type="submit" class="mb-sm btn btn-primary btn-outline" ng-click="editTrackingProject(track.Id,track.UserId)">Update</button>
+    <button type="submit" class="mb-sm btn btn-primary btn-outline" ng-click="editTrackingProject(track.Id,track.UserId,track.ToDate)">Update</button>
     <!--<button type="submit" class="mb-sm btn btn-warning btn-outline">Disengage</button> -->
     
     </div>
