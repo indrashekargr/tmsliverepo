@@ -5,6 +5,7 @@ app.controller('homeCtrl', function ($rootScope, $scope, $http, $state, $statePa
 $scope.userinfodata = loginAuthentication.getLoggedInUserInfo();
 console.log($scope.userinfodata);
 console.log($scope.userinfodata.EmployeeId);
+console.log($scope.userinfodata.BuId);
 //console.log($scope.userinfodata.currentUser);
 $scope.state = $state;
 window.$scope = $scope;
@@ -454,15 +455,15 @@ $scope.managerEmployeeList = response;
 employeeManagerList();
 
 // Fetch All Employee Data based on Business unit
-/*function employeeBuList() {
+function employeeBuList() {
     
     $http.get(ApiUrlPrefix + "fetchEmployeeMasterDetailsBasedOnBuId/" + $scope.userinfodata.BuId).success(function (response) {
     $scope.buEmployeeList = response;
     
-    //console.log(response);
+    console.log(response);
     });
     }
-    employeeBuList(); */
+    employeeBuList();
 
 //Search for Employee Data 
 function SearchCall() {
