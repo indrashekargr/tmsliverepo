@@ -126,11 +126,12 @@ background: #ddd;
                         </div>
                     </div> -->
                     <div class="col-lg-2">
-                        <div style="margin-top: 23px;">
+                        <div style="margin-top: 22px;">
                             <button ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==4 || userinfodata.RoleId==6" type="submit" ng-click="searchskill(category,skill,rating,Availability)"
-                                class="mb-sm btn-lg btn btn-primary btn-outline "><i class="fa fa-filter" aria-hidden="true"></i>
+                                class="mb-sm btn-lg btn btn-primary btn-outline " style="margin-left:-5px;"><i class="fa fa-filter" aria-hidden="true"></i>
                                  Filter</button>
-                            <button ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==4 || userinfodata.RoleId==6" class="mb-sm btn-lg btn btn-primary btn-outline"
+                            <button ng-if="userinfodata.RoleId==5 || userinfodata.RoleId==4 || userinfodata.RoleId==6" class="mb-sm btn-lg btn btn-primary btn-outline" style="
+    margin-left: 13px;"
                                     type="reset"
                                     ng-click="reset()"><i class="fa fa-refresh"></i>
                                 Refresh</button>
