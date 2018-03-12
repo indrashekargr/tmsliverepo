@@ -745,6 +745,45 @@
                 "deprecated": false
             }
         },
+
+        "/addFeedback": {
+            "post": {
+                "tags": [
+                    "TMS Employee Details"
+                ],
+                "operationId": "addFeedback",
+                "consumes": [],
+                "produces": [
+                    "application/json",
+                    "text/json"
+                ],
+                "parameters": [
+                    {
+                        "name": "addFeedback",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/addFeedback"
+                        }
+                    }
+
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Contact"
+                            }
+                        }
+                    }
+                },
+                "deprecated": false
+            }
+        },
+
+
         "/addEmployeeDataByHR": {
             "post": {
                 "tags": [
@@ -1729,6 +1768,39 @@
                 },
                 "CreatedBy": {
                     "type": "string"
+                }
+            }
+        },
+        "addFeedback": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "EmployeeId": {
+                    "format": "int32",
+                    "type": "integer"
+                },
+                "Type": {
+                    "type": "string"
+                },
+                "Details": {
+                    "type": "string"
+                },
+                "Status": {
+                    "type": "string"
+                },
+                "Remarks": {
+                    "type": "string"
+                },
+                "CreatedDate": {
+                    "type": "string",
+                    "format": "date-time"
+                },
+                "UpdateDated": {
+                    "type": "string",
+                    "format": "date-time"
                 }
             }
         },

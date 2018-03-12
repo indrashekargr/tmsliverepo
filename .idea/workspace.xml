@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8df1417e-751c-4ec7-91de-9dc86be1e44f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html" afterPath="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config/swagger.json" afterPath="$PROJECT_DIR$/config/swagger.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js" afterPath="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/mysqlConnection.js" afterPath="$PROJECT_DIR$/lib/mysqlConnection.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -16,33 +19,82 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TMP_Header.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/dist/app/Partials/TMP_Header.html">
+      <file leaf-file-name="addEmployeeResourceSkillsByHR.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/addEmployeeResourceSkillsByHR.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#nav#0;n#header#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#a#0;n#ul#0;n#div#3;n#nav#0;n#header#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="238">
+              <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TMP_Home.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html">
+      <file leaf-file-name="addFeedback.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/addFeedback.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="133" column="21" lean-forward="false" selection-start-line="133" selection-start-column="21" selection-end-line="133" selection-end-column="21" />
-              <folding>
-                <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#button#0;n#div#0;n#div#4;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="221">
+              <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mysqlConnection.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/mysqlConnection.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fetchEmployeeMasterDetailsBasedOnUsername.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addFeedback.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/handlers/addFeedback.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addFeedback.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/addFeedback.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="swagger.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/config/swagger.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="517">
+              <caret line="1797" column="37" lean-forward="true" selection-start-line="1797" selection-start-column="37" selection-end-line="1797" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addEmployeeDataByHR.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/addEmployeeDataByHR.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="91" column="12" lean-forward="true" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -51,9 +103,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ViewSkillsModal</find>
-      <find>ale</find>
-      <find>updateEmployee</find>
       <find>searchskill</find>
       <find>searchskillformanager</find>
       <find>Edit Skills</find>
@@ -81,6 +130,9 @@
       <find>Tracking</find>
       <find>employee</find>
       <find>Dashboard</find>
+      <find>addEmployeeResourceSkillsByHR</find>
+      <find>addEmployeeSkills</find>
+      <find>User</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -93,9 +145,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/lib/addEmployeeDataByHR.js" />
-        <option value="$PROJECT_DIR$/lib/addEmployeeResourceSkillsByHR.js" />
-        <option value="$PROJECT_DIR$/lib/addEmployeeStatusByManager.js" />
         <option value="$PROJECT_DIR$/lib/addskillcategoryforadmin.js" />
         <option value="$PROJECT_DIR$/lib/addstatusmasterbyadmin.js" />
         <option value="$PROJECT_DIR$/lib/addsubskillcategoryforadmin.js" />
@@ -110,7 +159,6 @@
         <option value="$PROJECT_DIR$/lib/fetchdesignationlist.js" />
         <option value="$PROJECT_DIR$/lib/fetchemployeedatabyadmin.js" />
         <option value="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnBuId.js" />
-        <option value="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js" />
         <option value="$PROJECT_DIR$/lib/fetchEmployeeMasterdetailsByManager.js" />
         <option value="$PROJECT_DIR$/lib/fetchemployeetrackingformanager.js" />
         <option value="$PROJECT_DIR$/lib/fetchqualificationList.js" />
@@ -131,19 +179,23 @@
         <option value="$PROJECT_DIR$/lib/updateskillcategoryforadmin.js" />
         <option value="$PROJECT_DIR$/lib/updatesubskillcategoryforadmin.js" />
         <option value="$PROJECT_DIR$/lib/viewSelfEmployeeResourceSkills.js" />
-        <option value="$PROJECT_DIR$/lib/mysqlConnection.js" />
         <option value="$PROJECT_DIR$/lib/externalemployeeRepository.js" />
         <option value="$PROJECT_DIR$/lib/searchEmployeeResourceSkillsForHR.js" />
         <option value="$PROJECT_DIR$/lib/employeeRepository.js" />
         <option value="$PROJECT_DIR$/lib/login.js" />
         <option value="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.js" />
         <option value="$PROJECT_DIR$/lib/fetchemployeetracking.js" />
-        <option value="$PROJECT_DIR$/config/swagger.json" />
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/lib/addtrackingemployee.js" />
         <option value="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnEmpId.js" />
         <option value="$PROJECT_DIR$/dist/app/Partials/TMP_Header.html" />
         <option value="$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html" />
+        <option value="$PROJECT_DIR$/handlers/addFeedback.js" />
+        <option value="$PROJECT_DIR$/lib/addFeedback.js" />
+        <option value="$PROJECT_DIR$/data/addFeedback.js" />
+        <option value="$PROJECT_DIR$/config/swagger.json" />
+        <option value="$PROJECT_DIR$/lib/mysqlConnection.js" />
+        <option value="$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js" />
       </list>
     </option>
   </component>
@@ -209,24 +261,6 @@
               <item name="tmsliverepo" type="b2602c69:ProjectViewProjectNode" />
               <item name="tmsliverepo" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="tmsliverepo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tmsliverepo" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tmsliverepo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tmsliverepo" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tmsliverepo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tmsliverepo" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="HomePage" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -235,16 +269,18 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/tmsliverepolocal/tmsliverepo" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="copyright" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\08-01-2018\tmsliverepo\data" />
+      <recent name="D:\08-01-2018\tmsliverepo\handlers" />
+      <recent name="D:\08-01-2018\tmsliverepo\lib" />
       <recent name="D:\08-01-2018\18-01-2018\tmslivev1\lib" />
       <recent name="D:\08-01-2018\18-01-2018\tmslivev1\data" />
-      <recent name="D:\08-01-2018\18-01-2018\tmslivev1\handlers" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -292,24 +328,23 @@
       <workItem from="1519992555034" duration="5000" />
       <workItem from="1519993751741" duration="4000" />
       <workItem from="1520337080133" duration="591000" />
-      <workItem from="1520414930211" duration="9418000" />
+      <workItem from="1520414930211" duration="16150000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="360820000" />
+    <option name="totallyTimeSpent" value="367552000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6603774" sideWeight="0.1068814" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17007874" sideWeight="0.8931186" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22362205" sideWeight="0.8931186" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24925596" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.6084829" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -464,34 +499,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/deleteEmployeeResourceSkillsByHR.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="765">
-          <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/fetchAllReportingHeads.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="17" lean-forward="false" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/fetchAllReportingHeadsupdate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="27" column="4" lean-forward="true" selection-start-line="27" selection-start-column="4" selection-end-line="27" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/fetchbusinessunitmasterlist.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-start-column="33" selection-end-line="25" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/fetchcategorylist.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -518,13 +525,6 @@
         <state relative-caret-position="442">
           <caret line="44" column="15" lean-forward="true" selection-start-line="44" selection-start-column="15" selection-end-line="44" selection-end-column="15" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="24" column="976" lean-forward="false" selection-start-line="24" selection-start-column="976" selection-end-line="24" selection-end-column="976" />
         </state>
       </provider>
     </entry>
@@ -731,13 +731,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config/swagger.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="2069" column="27" lean-forward="true" selection-start-line="2068" selection-start-column="18" selection-end-line="2069" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/addtrackingemployee.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -756,13 +749,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
           <caret line="49" column="12" lean-forward="true" selection-start-line="49" selection-start-column="12" selection-end-line="49" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/addEmployeeDataByHR.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -794,13 +780,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lib/mysqlConnection.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/dist/assets/css/bootstrap.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="825">
@@ -811,8 +790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/app/Partials/TMP_Header.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="30" column="0" lean-forward="true" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
           <folding>
             <element signature="n#style#0;n#img#0;n#div#0;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#nav#0;n#header#0;n#!!top" expanded="true" />
@@ -825,14 +804,79 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/dist/app/HomePage/TMP_Home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="133" column="21" lean-forward="false" selection-start-line="133" selection-start-column="21" selection-end-line="133" selection-end-column="21" />
+        <state relative-caret-position="595">
+          <caret line="143" column="24" lean-forward="true" selection-start-line="143" selection-start-column="24" selection-end-line="143" selection-end-column="24" />
           <folding>
             <element signature="n#style#0;n#h5#0;n#div#0;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#h5#0;n#div#1;n#div#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#div#4;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#button#0;n#div#0;n#div#4;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#button#1;n#div#0;n#div#4;n#div#0;n#form#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/addEmployeeDataByHR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="91" column="12" lean-forward="true" selection-start-line="91" selection-start-column="12" selection-end-line="91" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/handlers/addFeedback.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="19" lean-forward="false" selection-start-line="7" selection-start-column="8" selection-end-line="7" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/addFeedback.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="35" lean-forward="false" selection-start-line="9" selection-start-column="35" selection-end-line="9" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/addEmployeeResourceSkillsByHR.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="33" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/swagger.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="517">
+          <caret line="1797" column="37" lean-forward="true" selection-start-line="1797" selection-start-column="37" selection-end-line="1797" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/addFeedback.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/mysqlConnection.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="21" lean-forward="true" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/fetchEmployeeMasterDetailsBasedOnUsername.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="43" column="31" lean-forward="true" selection-start-line="43" selection-start-column="31" selection-end-line="43" selection-end-column="31" />
+          <folding />
         </state>
       </provider>
     </entry>
